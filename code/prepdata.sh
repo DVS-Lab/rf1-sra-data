@@ -10,12 +10,12 @@
 # 1) containers live under /data/tools on local computer. should these relative paths and shared? YODA principles would suggest so.
 # 2) other projects should use Jeff's python script for fixing the IntendedFor
 # 3) aside from containers, only absolute path in whole workflow (transparent to folks who aren't allowed to access to raw data)
-sourcedata=/data/sourcedata/rf1-sequence-pilot
+sourcedata=/data/sourcedata/rf1-sra
 
 sub=$1
 cb=$2 # user must provide the intended counterbalance order
 
-except_subs=(20022 10007 10003 10006 10008 10010 10014 10015 10026 10028 10030 10046)
+except_subs=(1001 3003)
 
 for i in "${except_subs[@]}"
 do
@@ -29,7 +29,7 @@ done
 # ensure paths are correct irrespective from where user runs the script
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-dsroot=/data/projects/rf1-mbme-pilot
+dsroot=/data/projects/rf1-sra-data
 
 echo ${dsroot}
 
@@ -80,6 +80,8 @@ bidsroot=$dsroot/bids
 echo "defacing subject $sub"
 pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
 mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_T1w.nii.gz
+pydeface ${bidsroot}/sub-${sub}/anat/sub-${sub}_FLAIR.nii.gz
+mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_FLAIR_defaced.nii.gz ${bidsroot}/sub-${sub}/anat/sub-${sub}_FLAIR.nii.gz
 #
 ## shift dates on scans to reduce likelihood of re-identification
 python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv

@@ -7,79 +7,82 @@ def create_key(template, outtype=('nii.gz',), annotation_classes=None):
 
 def infotodict(seqinfo):
     t1w = create_key('sub-{subject}/anat/sub-{subject}_T1w')
-    mag = create_key('sub-{subject}/fmap/sub-{subject}_run-{item:01d}_magnitude')
-    phase = create_key('sub-{subject}/fmap/sub-{subject}_run-{item:01d}_phasediff')
+    mag = create_key('sub-{subject}/fmap/sub-{subject}_magnitude')
+    phase = create_key('sub-{subject}/fmap/sub-{subject}_phasediff')
+    t2_flair = create_key('sub-{subject}/anat/sub-{subject}_FLAIR')
+    #nm = create_key('sub-{subject}/anat/sub-{subject}_nm')
 
+    trust = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_bold')
+    trust_sbref = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_sbref')
 
-    #me1
-    mb1me1 =       create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb1me1_bold')
-    mb3me1 =       create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me1_bold')
-    mb3me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me1_sbref')
-    mb6me1 =       create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me1_bold')
-    mb6me1_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me1_sbref')
+    sharedreward = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_run-{item:d}_bold')
+    sharedreward_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_run-{item:d}_sbref')
 
-    #me4
-    mb1me4 =            create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb1me4_bold')
-    mb3me4 =            create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me4_bold')
-    mb3me4_sbref =      create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb3me4_sbref')
-    mb6me4 =            create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me4_bold')
-    mb6me4_sbref =      create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_acq-mb6me4_sbref')
+    srSocial = create_key('sub-{subject}/func/sub-{subject}_task-socialdoors_run-{item:d}_bold')
+    srSocial_sbref = create_key('sub-{subject}/func/sub-{subject}_task-socialdoors_run-{item:d}_sbref')
 
+    srDoors = create_key('sub-{subject}/func/sub-{subject}_task-doors_run-{item:d}_bold')
+    srDoors_sbref = create_key('sub-{subject}/func/sub-{subject}_task-doors_run-{item:d}_sbref')
 
+    UGR = create_key('sub-{subject}/func/sub-{subject}_task-ugr_run-{item:d}_bold')
+    UGR_sbref = create_key('sub-{subject}/func/sub-{subject}_task-ugr_run-{item:d}_sbref')
 
-        # mag: [],
-        # phase: [],
-
-    info = {t1w: [],mag: [], phase: [],
-
-            mb1me1: [],
-            mb3me1: [],
-            mb3me1_sbref: [],
-            mb6me1: [],
-            mb6me1_sbref: [],
-
-            mb1me4: [],
-            mb3me4: [],
-            mb3me4_sbref: [],
-            mb6me4: [],
-            mb6me4_sbref: [],
-
+    info = {t1w: [],
+            mag: [],
+            phase: [],
+            t2_flair: [],
+            trust: [],
+            trust_sbref: [],
+            sharedreward: [],
+            sharedreward_sbref: [],
+            srSocial: [],
+            srSocial_sbref: [],
+            srDoors: [],
+            srDoors_sbref: [],
+            UGR: [],
+            UGR_sbref: [],
+            #nm: []
             }
 
+#NOTE: NOTHING IN PLACE FOR LOCALIZER/T1_anat REDOS
+
     list_of_ids = [s.series_id for s in seqinfo]
+
     for s in seqinfo:
         if ('T1w-anat_mpg_07sag_iso' in s.protocol_name) and ('NORM' in s.image_type):
             info[t1w] = [s.series_id]
         if ('gre_field' in s.protocol_name) and ('NORM' in s.image_type):
-            info[mag].append(s.series_id)
+            info[mag] = [s.series_id]
         if ('gre_field' in s.protocol_name) and ('P' in s.image_type):
-            info[phase].append(s.series_id)
+            info[phase] = [s.series_id]
+        if ('t2_tse_dark-fluid_tra_p3' in s.protocol_name) and (s.dim3 == 47):
+        		info[t2_flair] = [s.series_id]
+        #if ('Neuromel' in s.protocol_name) and ('*tse2d1_4' in s.sequence_name):
+        #    info[nm] = [s.series_id]
 
-        # no multi-echo
-        if (s.dim4 >= 100) and ('MB1_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
-            info[mb1me1].append(s.series_id)
+        if (s.dim4 == 1120) and ('Trust' in s.protocol_name) and ('NORM' in s.image_type):
+            info[trust].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-        if (s.dim4 >= 100) and ('MB3_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
-            info[mb3me1].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[mb3me1_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 >= 100) and ('MB6_' in s.protocol_name) and ('_ME1' in s.protocol_name) and ('M' in s.image_type):
-            info[mb6me1].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[mb6me1_sbref].append(list_of_ids[idx -1])
+            info[trust_sbref].append(list_of_ids[idx -1])
 
-        # multi-echo standard
-        if (s.dim4 >= 100) and ('MB1_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
-            info[mb1me4].append(s.series_id)
+        if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('NORM' in s.image_type):
+            info[sharedreward].append(s.series_id)
             idx = list_of_ids.index(s.series_id)
-        if (s.dim4 >= 100) and ('MB3_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
-            info[mb3me4].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[mb3me4_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 >= 100) and ('MB6_' in s.protocol_name) and ('_ME4' in s.protocol_name) and ('M' in s.image_type):
-            info[mb6me4].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[mb6me4_sbref].append(list_of_ids[idx -1])
+            info[sharedreward_sbref].append(list_of_ids[idx -1])
 
+        if (s.dim4 == 872) and ('SocialDoors_face' in s.protocol_name) and ('NORM' in s.image_type):
+            info[srSocial] = [s.series_id]
+            idx = list_of_ids.index(s.series_id)
+            info[srSocial_sbref].append(list_of_ids[idx -1])
+
+        if (s.dim4 == 872) and ('SocialDoors_doors' in s.protocol_name) and ('NORM' in s.image_type):
+            info[srDoors] = [s.series_id]
+            idx = list_of_ids.index(s.series_id)
+            info[srDoors_sbref].append(list_of_ids[idx -1])
+
+        if (s.dim4 == 960) and ('UGR' in s.protocol_name) and ('NORM' in s.image_type):
+            info[UGR].append(s.series_id)
+            idx = list_of_ids.index(s.series_id)
+            info[UGR_sbref].append(list_of_ids[idx -1])
 
     return info
