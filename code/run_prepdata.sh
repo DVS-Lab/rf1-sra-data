@@ -9,20 +9,16 @@ DLscript=${scriptdir}/downloadXNAT.py
 
 python $DLscript
 
-for sub_CB in "10391 3"; do 
-        set -- $sub_CB
-	sub=$1
-	CB=$2
-	
-
+#for sub in `cat ${scriptdir}/newsubs.txt` ; do
+for sub in 10701 10691 10674 10649 10317; do
 	script=${scriptdir}/prepdata.sh
-	NCORES=4
+	NCORES=5
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
-		echo "made it here" $script $sub $CB
+		echo "made it here" $script $sub
 		sleep 1m
 	done
-        echo "Running prepdata" $script $sub $CB
-	bash $script $sub $CB &
+        echo "Running prepdata" $script $sub
+	bash $script $sub &
 	sleep 5s
 
 done
@@ -31,7 +27,7 @@ NCORES=8
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
 		sleep 1s
 	done
-bash ${scriptdir}/run_motioneval.sh
-python ${scriptdir}/IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
-bash ${scriptdir}/run_gen3colfiles.sh
+#bash ${scriptdir}/run_motioneval.sh
+#python ${scriptdir}/IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
+#bash ${scriptdir}/run_gen3colfiles.sh
 

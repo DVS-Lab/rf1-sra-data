@@ -6,7 +6,9 @@ maindir="$(dirname "$scriptdir")"
 bidsdir=$maindir/bids
 
 #for sub in $bidsdir/sub*; do
-for sub in 'sub-10555' 'sub-10584' 'sub-10596' 'sub-10603' 'sub-10608' 'sub-10617' 'sub-10656' 'sub-10663' 'sub-10677'; do
+# CHECK 10585 & 10589 OUTPUT, MISSING .HTML FILES?
+#for sub in 'sub-10555' 'sub-10584' 'sub-10596' 'sub-10603' 'sub-10608' 'sub-10617' 'sub-10656' 'sub-10663' 'sub-10677'; do
+for sub in 'sub-10584'; do
 
 	sub="${sub##*/}"
 

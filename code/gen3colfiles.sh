@@ -14,22 +14,23 @@
 
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
-baseout=${maindir}/derivatives/fsl/EVFiles
+baseout=/data/projects/rf1-sra-socdoors/derivatives/fsl/EVFiles
 if [ ! -d ${baseout} ]; then
   mkdir -p $baseout
 fi
 
 sub=$1
 
-
-for acq in mb1me1 mb1me4 mb3me1 mb3me4 mb6me1 mb6me4; do
-  input=${maindir}/bids/sub-${sub}/func/sub-${sub}_task-sharedreward*_acq-${acq}_events.tsv
-  output=${baseout}/sub-${sub}/sharedreward/acq-${acq}
-  mkdir -p $output
-  if [ -e $input ]; then
-    bash ${scriptdir}/BIDSto3col.sh $input ${output}/
-  else
-    echo "PATH ERROR: cannot locate ${input}."
-    continue
-  fi
+for task in doors socialdoors; do
+	for run in 1; do
+  			input=/data/projects/rf1-sra/stimuli/Scan-Social_Doors/data/sub-${sub}/sub-${sub}_task-${task}_run-${run}_events.tsv
+  			output=${baseout}/sub-${sub}/${task}
+			mkdir -p $output
+  			if [ -e $input ]; then
+    			bash ${scriptdir}/BIDSto3col.sh $input ${output}/
+  			else
+    		echo "PATH ERROR: cannot locate ${input}."
+    		continue
+  			fi
+	done
 done

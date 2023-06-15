@@ -13,7 +13,7 @@
 sourcedata=/data/sourcedata/rf1-sra
 
 sub=$1
-cb=$2 # user must provide the intended counterbalance order
+#cb=$2 # user must provide the intended counterbalance order
 
 except_subs=(1001 3003)
 
@@ -57,9 +57,13 @@ fi
 	#-f /out/code/heuristics.py \
 	#-c dcm2niix -b --minmeta -o /out/bids --overwrite
 
-	#heudiconv is running through python right now not singularity
+	#heudiconv is running through singularity now, not python
 
-	heudiconv -d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
+	singularity run --cleanenv \
+	-B $dsroot:/out \
+	-B $sourcedata:/sourcedata \
+	/data/tools/heudiconv-0.13.1.sif \
+	-d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 	-o ${dsroot}/bids/ \
 	-f ${dsroot}/code/heuristics.py \
 	-s $sub \

@@ -27,12 +27,12 @@ singularity run --cleanenv \
 -B $maindir:/base \
 -B /data/tools/licenses:/opts \
 -B $scratchdir:/scratch \
-/data/tools/fmriprep-22.0.2.simg \
-/base/bids /base/derivatives/fmriprep-melodic-100 \
+/data/tools/fmriprep-23.1.1.simg \
+/base/bids /base/derivatives/fmriprep \
 participant --participant_label $sub \
 --stop-on-first-crash \
 --me-output-echos \
---use-aroma --error-on-aroma-warnings --stop-on-first-crash \
---aroma-melodic-dimensionality -100 \
+--stop-on-first-crash \
 --fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
 
+#to add melodic, use #--aroma-melodic-dimensionality -100 \
