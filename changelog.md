@@ -2,6 +2,10 @@
 
 Below is a log of all changes made to data collection tools, procedures, surveys, and assessments from the inception of the study until the present. (Updated 6/22/2023)
 
+## 06/26/2023 - REDCap (edit #178) 
+
+- Changed fyfa measure to short form + added scoring for it
+
 ## 06/22/2023 - REDCap (edit #176)
 
 - Moved cog reflection task from questionnaires for home to ext
