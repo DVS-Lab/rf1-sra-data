@@ -2,6 +2,14 @@
 
 Below is a log of all changes made to data collection tools, procedures, surveys, and assessments from the inception of the study until the present. (Updated 6/22/2023)
 
+## 07/18/2023 
+
+- Dave and Avi discussed giving Jamie Riley our flyer to send to their participants (need IRB approval for the flyer).
+
+## 07/17/2023
+
+- Tania said in a meeting that TICS and FAQ would be the only measures necessary to determine MCI. 
+
 ## 06/26/2023 - REDCap (edit #178) 
 
 - Changed fyfa measure to short form + added scoring for it
