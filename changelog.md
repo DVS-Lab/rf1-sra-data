@@ -2,6 +2,10 @@
 
 Below is a log of all changes made to data collection tools, procedures, surveys, and assessments from the inception of the study until the present. (Updated 6/22/2023)
 
+## 07/20/2023 
+
+- Tania said in an email with Avi that any <75 participant with an MCI score less than 
+
 ## 07/18/2023 
 
 - Dave and Avi discussed giving Jamie Riley our flyer to send to their participants (need IRB approval for the flyer).
