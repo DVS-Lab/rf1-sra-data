@@ -4,9 +4,7 @@ Below is a log of all changes made to data collection tools, procedures, surveys
 
 ## 07/20/2023 
 
-- Tania said in an email with Avi that For the TICS, the proposed cut score varies by paper. I think we could be conservative and use a cut score of 36 for people <age 75 and 33 for people > age 70. Those cut scores are based on Cook et al 2009.   Others (Knopman et al) have proposed a lower cut score of 31 but they included clinic referrals in their sample. So let’s use the more conservative cut scores.
-
-For the FAQ, the cut off is 9. If the FAQ is greater than 9, then the person should not be recruited bc that is the dementia range.
+- Tania said in an email with Avi  "For the TICS, the proposed cut score varies by paper. I think we could be conservative and use a cut score of 36 for people <age 75 and 33 for people > age 70. Those cut scores are based on Cook et al 2009.   Others (Knopman et al) have proposed a lower cut score of 31 but they included clinic referrals in their sample. So let’s use the more conservative cut scores. For the FAQ, the cut off is 9. If the FAQ is greater than 9, then the person should not be recruited bc that is the dementia range."
 
 ## 07/18/2023 
 
