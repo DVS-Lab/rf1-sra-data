@@ -4,7 +4,7 @@
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
 
-sourcedir=/ZPOOLdata/sourcedata/sourcedata/rf1-sra/*
+sourcedir=/ZPOOL/data/sourcedata/sourcedata/rf1-sra/*
 DLscript=${scriptdir}/downloadXNAT.py
 
 python $DLscript
@@ -30,4 +30,3 @@ NCORES=8
 #bash ${scriptdir}/run_motioneval.sh
 #python ${scriptdir}/IDoutliers.py --mriscDir "${sourcedir}/derivatives/mriqc"
 #bash ${scriptdir}/run_gen3colfiles.sh
-
