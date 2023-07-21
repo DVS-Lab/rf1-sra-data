@@ -11,7 +11,7 @@
 # 2) other projects should use Jeff's python script for fixing the IntendedFor
 # 3) aside from containers, only absolute path in whole workflow (transparent to folks who aren't allowed to access to raw data)
 sourcedata=/ZPOOL/data/sourcedata/sourcedata/rf1-sra
-
+           /ZPOOL/data/sourcedata/sourcedata/rf1-sra/
 sub=$1
 
 except_subs=(1001 3003)
@@ -43,7 +43,7 @@ singularity run --cleanenv \
 -B $dsroot:/out \
 -B $sourcedata:/sourcedata \
 /ZPOOL/data/tools/heudiconv-0.13.1.sif \
---files /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files \
+--files /sourcedata/Smith-SRA-${sub}/*/scans/*/*/DICOM/files \
 -o /out/bids/ \
 -f /out/code/heuristics.py \
 -s $sub \
