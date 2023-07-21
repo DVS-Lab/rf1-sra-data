@@ -10,7 +10,7 @@
 # 1) containers live under /data/tools on local computer. should these relative paths and shared? YODA principles would suggest so.
 # 2) other projects should use Jeff's python script for fixing the IntendedFor
 # 3) aside from containers, only absolute path in whole workflow (transparent to folks who aren't allowed to access to raw data)
-sourcedata=/ZPOOL/data/sourcedata/rf1-sra
+sourcedata=/ZPOOL/data/sourcedata/sourcedata/rf1-sra
 
 sub=$1
 #cb=$2 # user must provide the intended counterbalance order
@@ -122,8 +122,8 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	-B $dsroot/bids:/data \
 	-B $dsroot/derivatives/mriqc:/out \
 	-B $scratch:/scratch \
-	/ZPOOL/data/tools/mriqc-0.16.1.simg \
-	/ZPOOL/data /out \
+	/ZPOOL/data/tools/mriqc-23.1.0.simg \
+	/data /out \
        participant --participant_label $sub -w /scratch
 
 fi
