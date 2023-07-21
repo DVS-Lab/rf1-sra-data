@@ -26,7 +26,7 @@ os.umask(0)
 
 url = "https://xnat.cla.temple.edu"
 session = "Smith-SRA"
-outputDir = "/data/sourcedata/rf1-sra"
+outputDir = "/ZPOOL/data/sourcedata/rf1-sra"
 
 subs=os.listdir(outputDir)
 

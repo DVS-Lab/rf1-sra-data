@@ -4,13 +4,13 @@
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
 
-sourcedir=/data/sourcedata/rf1-sra/*
+sourcedir=/ZPOOLdata/sourcedata/rf1-sra/*
 DLscript=${scriptdir}/downloadXNAT.py
 
 python $DLscript
 
-#for sub in `cat ${scriptdir}/newsubs.txt` ; do
-for sub in 10701 10691 10674 10649 10317; do
+for sub in `cat ${scriptdir}/newsubs.txt` ; do
+#for sub in 10701 10691 10674 10649 10317; do
 	script=${scriptdir}/prepdata.sh
 	NCORES=5
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do

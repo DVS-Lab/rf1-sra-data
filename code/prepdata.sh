@@ -10,7 +10,7 @@
 # 1) containers live under /data/tools on local computer. should these relative paths and shared? YODA principles would suggest so.
 # 2) other projects should use Jeff's python script for fixing the IntendedFor
 # 3) aside from containers, only absolute path in whole workflow (transparent to folks who aren't allowed to access to raw data)
-sourcedata=/data/sourcedata/rf1-sra
+sourcedata=/ZPOOL/data/sourcedata/rf1-sra
 
 sub=$1
 #cb=$2 # user must provide the intended counterbalance order
@@ -29,7 +29,7 @@ done
 # ensure paths are correct irrespective from where user runs the script
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-dsroot=/data/projects/rf1-sra-data
+dsroot=/ZPOOL/data/projects/rf1-sra-data
 
 echo ${dsroot}
 
@@ -62,7 +62,7 @@ fi
 	singularity run --cleanenv \
 	-B $dsroot:/out \
 	-B $sourcedata:/sourcedata \
-	/data/tools/heudiconv-0.13.1.sif \
+	/ZPOOL/data/tools/heudiconv-0.13.1.sif \
 	-d ${sourcedata}/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 	-o ${dsroot}/bids/ \
 	-f ${dsroot}/code/heuristics.py \
@@ -103,7 +103,7 @@ fi
 
 
 # make scratch
-scratch=/data/scratch/`whoami`
+scratch=/ZPOOL/data/scratch/`whoami`
 if [ ! -d $scratch ]; then
 	mkdir -p $scratch
 fi
@@ -111,7 +111,7 @@ fi
 # no space left on device error for v0.15.2 and higher
 # https://neurostars.org/t/mriqc-no-space-left-on-device-error/16187/1
 # https://github.com/poldracklab/mriqc/issues/850
-TEMPLATEFLOW_DIR=/data/tools/templateflow
+TEMPLATEFLOW_DIR=/ZPOOL/data/tools/templateflow
 export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
 if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
  echo "running mriqc for sub-${sub}"
@@ -122,8 +122,8 @@ if [ ! -d $dsroot/derivatives/mriqc/sub-${sub} ]; then
 	-B $dsroot/bids:/data \
 	-B $dsroot/derivatives/mriqc:/out \
 	-B $scratch:/scratch \
-	/data/tools/mriqc-0.16.1.simg \
-	/data /out \
+	/ZPOOL/data/tools/mriqc-0.16.1.simg \
+	/ZPOOL/data /out \
        participant --participant_label $sub -w /scratch
 
 fi
