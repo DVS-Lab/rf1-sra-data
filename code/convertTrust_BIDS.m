@@ -1,6 +1,7 @@
 function convertTrust_BIDS(subj)
 maindir = pwd;
-cd ../../rf1-sra/stimuli/Scan-Card_Guessing_Game/logs
+%"C:\Users\tup54227\Documents\GitHub\rf1-sra\stimuli\Scan-Investment_Game\logs\10418\sub-10418_task-trust_run-1_raw.csv"
+cd ../../rf1-sra/stimuli/Scan-Investment_Game/logs
 logdir = pwd;
 
 % Partner is Friend=3, Stranger=2, Computer=1
@@ -16,9 +17,11 @@ fid2 = fopen(fname,'a');
 
 try
     
-    for r = 0:4
+    for r = 0:1
         run_misses = 0;
-        fname = fullfile(maindir,'psychopy','logs',num2str(subj),sprintf('sub-%03d_task-trust_run-%d_raw.csv',subj,r));
+        %"logs\10418\sub-10418_task-trust_run-1_raw.csv"
+        fname = fullfile(logdir,num2str(subj),sprintf('sub-%05d_task-trust_run-%d_raw.csv',subj,r));
+        disp(fname)
         if exist(fname,'file')
             fid = fopen(fname,'r');
         else
@@ -28,6 +31,7 @@ try
         
         C = textscan(fid,[repmat('%f',1,14) '%s' repmat('%f',1,9)],'Delimiter',',','HeaderLines',1,'EmptyValue', NaN);
         fclose(fid);
+        %C = tblread(fid,[repmat('%f',1,14) '%s' repmat('%f',1,9)],'Delimiter',',','HeaderLines',1,'EmptyValue', NaN);
         
         outcomeonset = C{20}; % should be locked to the presentation of the partner cue (at least 500 ms before choice screen)
         choiceonset = C{11}; % should be locked to the presentation of the partner cue (at least 500 ms before choice screen)
@@ -40,7 +44,7 @@ try
         cRight = C{8};
         options = [cLeft cRight];
         
-        fname = sprintf('sub-%03d_task-trust_run-%02d_events.tsv',subj,r+1);
+        fname = sprintf('sub-%05d_task-trust_run-%01d_events.tsv',subj,r+1);
         output = fullfile(maindir,'bids',['sub-' num2str(subj)],'func');
         if ~exist(output,'dir')
             mkdir(output)
