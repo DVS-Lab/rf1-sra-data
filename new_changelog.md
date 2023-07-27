@@ -1,5 +1,13 @@
 # Changelog
 
+(2023/07/24) - REDCap (edit #341) - We stopped piping the data from the island screener to the Recruitment Database
+
+(2023/07/20) - Tania said in an email with Avi  "For the TICS, the proposed cut score varies by paper. I think we could be conservative and use a cut score of 36 for people < age 75 and 33 for people > age 70. Those cut scores are based on Cook et al 2009.   Others (Knopman et al) have proposed a lower cut score of 31 but they included clinic referrals in their sample. So let’s use the more conservative cut scores. For the FAQ, the cut off is 9. If the FAQ is greater than 9, then the person should not be recruited bc that is the dementia range."
+
+(2023/07/18) - Dave and Avi discussed giving Jamie Riley our flyer to send to their participants (need IRB approval for the flyer).
+
+(2023/07/17) - Tania said in a meeting that TICS and FAQ would be the only measures necessary to determine MCI. 
+
 (2023/06/26) - REDCap (edit #178) - Changed fyfa measure to short form + added scoring for it
 
 (2023/06/22) - REDCap (edit #176) - Moved cog reflection task from questionnaires for home to ext
