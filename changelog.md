@@ -1,56 +1,30 @@
 # Changelog
 
-Below is a log of all changes made to data collection tools, procedures, surveys, and assessments from the inception of the study until the present. (Updated 6/22/2023)
+(2023/07/24) - REDCap (edit #341) - We stopped piping the data from the island screener to the Recruitment Database
 
-## 07/20/2023 
+(2023/07/20) - Tania said in an email with Avi  "For the TICS, the proposed cut score varies by paper. I think we could be conservative and use a cut score of 36 for people < age 75 and 33 for people > age 70. Those cut scores are based on Cook et al 2009.   Others (Knopman et al) have proposed a lower cut score of 31 but they included clinic referrals in their sample. So let’s use the more conservative cut scores. For the FAQ, the cut off is 9. If the FAQ is greater than 9, then the person should not be recruited bc that is the dementia range."
 
-- Tania said in an email with Avi  "For the TICS, the proposed cut score varies by paper. I think we could be conservative and use a cut score of 36 for people <age 75 and 33 for people > age 70. Those cut scores are based on Cook et al 2009.   Others (Knopman et al) have proposed a lower cut score of 31 but they included clinic referrals in their sample. So let’s use the more conservative cut scores. For the FAQ, the cut off is 9. If the FAQ is greater than 9, then the person should not be recruited bc that is the dementia range."
+(2023/07/18) - Dave and Avi discussed giving Jamie Riley our flyer to send to their participants (need IRB approval for the flyer).
 
-## 07/18/2023 
+(2023/07/17) - Tania said in a meeting that TICS and FAQ would be the only measures necessary to determine MCI. 
 
-- Dave and Avi discussed giving Jamie Riley our flyer to send to their participants (need IRB approval for the flyer).
+(2023/06/26) - REDCap (edit #178) - Changed fyfa measure to short form + added scoring for it
 
-## 07/17/2023
+(2023/06/22) - REDCap (edit #176) - Moved cog reflection task from questionnaires for home to ext
 
-- Tania said in a meeting that TICS and FAQ would be the only measures necessary to determine MCI. 
+(2023/06/21) - REDCap (edit #173) - Yale Food Addiction Scale replaced with short-form in Extra Time Questionnaires
 
-## 06/26/2023 - REDCap (edit #178) 
+(2023/06/07) - REDCap (edit #168) - Added second blood pressure to both appt session notes
 
-- Changed fyfa measure to short form + added scoring for it
+(2023/05/18) - REDCap (edit #156) - Added dospert to from_screener
 
-## 06/22/2023 - REDCap (edit #176)
+(2023/05/16) - GitHub - Edit to socialdoors recall instructions - Commit: [11cfa852eeee15a8e0dc6fc7ac182ec3f082e22f](https://github.com/DVS-Lab/rf1-sra/commit/11cfa852eeee15a8e0dc6fc7ac182ec3f082e22f)
 
-- Moved cog reflection task from questionnaires for home to ext
+(2023/05/09) - REDCap (edit #146) - [fraud_island] --> [fraud_island_credit] added to from_screener (12 fields)
 
-## 06/21/2023 - REDCap (edit #173)
+(2023/05/08) - GitHub - Removes lines about Q4H since it was moved to island - Commit: [86dc25ebaa3262e5aeab7f7316d296fa25d06c20](https://github.com/DVS-Lab/rf1-sra/commit/86dc25ebaa3262e5aeab7f7316d296fa25d06c20)
 
-- Yale Food Addiction Scale replaced with short-form in Extra Time Questionnaires
-
-## 06/07/2023 - REDCap (edit #168)
-
-- Added second blood pressure to both appt session notes
-
-## 05/18/2023 - REDCap (edit #156)
-
-- Added dospert to from_screener
-
-## 05/16/2023 - GitHub
-
-- Edit to socialdoors recall instructions
-- Commit: [11cfa852eeee15a8e0dc6fc7ac182ec3f082e22f](https://github.com/DVS-Lab/rf1-sra/commit/11cfa852eeee15a8e0dc6fc7ac182ec3f082e22f)
-
-## 05/09/2023 - REDCap (edit #146)
-
-- [fraud_island] --> [fraud_island_credit] added to from_screener (12 fields)
-
-## 05/08/2023 - GitHub
-
-- Removes lines about Q4H since it was moved to island
-- Commit: [86dc25ebaa3262e5aeab7f7316d296fa25d06c20](https://github.com/DVS-Lab/rf1-sra/commit/86dc25ebaa3262e5aeab7f7316d296fa25d06c20)
-
-## 04/26/2023 - REDCap (edit #***)
-
-- Moved from postscan_questionnaires to prescan_questionnaires:
+(2023/04/26) - REDCap (edit #***) - Moved from postscan_questionnaires to prescan_questionnaires:
   - [norc_##]
   - [nbs_adult_##]
   - [bsmas_##]
@@ -64,33 +38,19 @@ Below is a log of all changes made to data collection tools, procedures, surveys
 - Social doors instructions resized
 - Commit: [56b35383e69f80c48dc9deb8f88e2f5507284d0a](https://github.com/DVS-Lab/rf1-sra/commit/56b35383e69f80c48dc9deb8f88e2f5507284d0a)
 
-## 04/26/2023 - REDCap (edit #124)
+(2023/04/26) - REDCap (edit #124) - [fraud_adult_retest_1] and [fraud_adult_retest_2] added to postscan_questionnaires
 
-- [fraud_adult_retest_1] and [fraud_adult_retest_2] added to postscan_questionnaires
+(2023/04/05) - REDCap (edit #105) - [mspss_adult_##_retest] added to prescan questionnaires
 
-## 04/05/2023 - REDCap (edit #105)
+(2023/04/04) - REDCap (edit #104) - [pam_adult_##_retest] added to prescan_questionnaires
 
-- [mspss_adult_##_retest] added to prescan questionnaires
+(2023/03/31) - REDCap (edit #102) - [pam_adult_17] added to pam question set (we changed fields and stuff too I think)
 
-## 04/04/2023 - REDCap (edit #104)
+(2023/03/27) - REDCap (edit #87) - [fs_tg_1a] to [fs_sessionnotes_9c] were added ~60 fields (no clue what they are –AD)
 
-- [pam_adult_##_retest] added to prescan_questionnaires
+(2023/03/22) - REDCap (edit #83) - Removed [aadis_f_q#]
 
-## 03/31/2023 - REDCap (edit #102)
-
-- [pam_adult_17] added to pam question set (we changed fields and stuff too I think)
-
-## 03/27/2023 - REDCap (edit #87)
-
-- [fs_tg_1a] to [fs_sessionnotes_9c] were added ~60 fields (no clue what they are –AD)
-
-## 03/22/2023 - REDCap (edit #83)
-
-- Removed [aadis_f_q#]
-
-## 03/15/2023 - REDCap (edit #79)
-
-- Moved from postscan_questionnaires to from_screener:
+(2023/03/15) - REDCap (edit #79) - Moved from postscan_questionnaires to from_screener:
   - [victim_fraud_yn]
   - [fraud_event]
   - [fraud_adult_1]
@@ -108,55 +68,28 @@ Below is a log of all changes made to data collection tools, procedures, surveys
   - [pam_adult_##]
 - Added birth city for GUID tool to from_screener (from admin agenda)
 
-## 03/09/2023 - GitHub rf1-sra
+(2023/03/09) - GitHub rf1-sra - Updated mock scan powerpoint to mention island screener payment - Commit: [8cacba977166581d2a2f8cde3040bb796c7199bb](https://github.com/DVS-Lab/rf1-sra/commit/8cacba977166581d2a2f8cde3040bb796c7199bb)
 
-- Updated mock scan powerpoint to mention island screener payment
-- Commit: [8cacba977166581d2a2f8cde3040bb796c7199bb](https://github.com/DVS-Lab/rf1-sra/commit/8cacba977166581d2a2f8cde3040bb796c7199bb)
-
-## 03/06/2023 - IRB
-
-- Approved amendments:
+(2023/03/06) - IRB - Approved amendments:
   - Removing left-handed and metabolic disorders exclusionary criteria
   - Including the online (island) screener
   - Waived informed consent for the online screener
   - Including raffle info on the landing page
 
-## 03/06/2023 - GitHub rf1-sra
+(2023/03/06) - GitHub rf1-sra - Updated mock scan powerpoint to correct incentive structure - Commit: [3182f625002bea925adafcfaff94377e9ba23646](https://github.com/DVS-Lab/rf1-sra/commit/3182f625002bea925adafcfaff94377e9ba23646#diff-cf94eee262c95ddaf2e49065a8a35a6c5d6b8e747702d3dc9f7392d7a8859b43)
 
-- Updated mock scan powerpoint to correct incentive structure
-- Commit: [3182f625002bea925adafcfaff94377e9ba23646](https://github.com/DVS-Lab/rf1-sra/commit/3182f625002bea925adafcfaff94377e9ba23646#diff-cf94eee262c95ddaf2e49065a8a35a6c5d6b8e747702d3dc9f7392d7a8859b43)
+(2023/02/16) - REDCap (edit #31) - Started collecting last name [sub_l_name]
 
-## 02/16/2023 - REDCap (edit #31)
+(2023/02/07) - REDCap (edit #24) - [aadis_f_q#] added to postscan_questionnaires
 
-- Started collecting last name [sub_l_name]
+(2022/12/21) - REDCap (edit #15) - [bpaqsf_1] to [bpaqsf_12] removed
 
-## 02/07/2023 - REDCap (edit #24)
+(2022/12/21) - REDCap (edit #14) - PANAS moved from postscan_questionnaires to prescan_questionnaires + [ses_1] removed
 
-- [aadis_f_q#] added to postscan_questionnaires
+(2022/12/20) - REDCap (edit #13) - [rent_or_own_prop] added to SES
 
-## 12/21/2022 - REDCap (edit #15)
+(2022/12/19) - GitHub rf1-aging - UGDG (mock scan): # of trials changed from 36 to 30, values changed from 16:32 to 15:2:25, combinations changed from 0.06:0.13:0.6 to 0.05 .10 .25 .50, counterbalance changed from A;B;A to A;B;A;B;A;B;A
 
-- [bpaqsf_1] to [bpaqsf_12] removed
+(2022/12/19) - REDCap (edit #11) - Removed the "P2" lines from the PROMIS pool
 
-## 12/21/2022 - REDCap (edit #14)
-
-- PANAS moved from postscan_questionnaires to prescan_questionnaires + [ses_1] removed
-
-## 12/20/2022 - REDCap (edit #13)
-
-- [rent_or_own_prop] added to SES
-
-## 12/19/2022 - GitHub rf1-aging
-
-- UGDG (mock scan): # of trials changed from 36 to 30, values changed from 16:32 to 15:2:25, combinations changed from 0.06:0.13:0.6 to 0.05 .10 .25 .50, counterbalance changed from A;B;A to A;B;A;B;A;B
-- Commit: [e4b49cbb5d276f6ca598c43e8ec88a0bbfdaaa45](https://github.com/DVS-Lab/rf1-aging/commit/e4b49cbb5d276f6ca598c43e8ec88a0bbfdaaa45#diff-e28d66e8d988aa301960924ba2af87135a7d3f83176251cfca9dd86935c1c07b)
-
-## 12/08/2022 - REDCap (edit #8)
-
-- [op_additional_info] added to SES op
-
-## 12/01/2022 - REDCap (edit #3)
-
-- [personal_income] and [number_in_household] added to SES
-
-## 11/28/2022 - Project goes online
+(2022/12/08) - REDCap (edit #8) - [op_additional_info] added to SES op
