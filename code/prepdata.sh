@@ -62,36 +62,3 @@ mv -f ${bidsroot}/sub-${sub}/anat/sub-${sub}_FLAIR_defaced.nii.gz ${bidsroot}/su
 
 ## shift dates on scans to reduce likelihood of re-identification
 python $codedir/shiftdates.py $dsroot/bids/sub-${sub}/sub-${sub}_scans.tsv
-
-
-
-## PART 3: Run MRIQC on subject
-# To-do: this should be placed in its own script and ran through datalad with YODA principles
-
-## make derivatives folder if it doesn't exist.
-## let's keep this out of bids for now
-echo "running MRIQC for subject $sub remember to clear your scratch"
-if [ ! -d $dsroot/derivatives/mriqc ]; then
-	mkdir -p $dsroot/derivatives/mriqc
-fi
-
-
-# make scratch
-scratch=/ZPOOL/data/scratch/`whoami`
-if [ ! -d $scratch ]; then
-	mkdir -p $scratch
-fi
-
-# no space left on device error for v0.15.2 and higher
-# https://neurostars.org/t/mriqc-no-space-left-on-device-error/16187/1
-# https://github.com/poldracklab/mriqc/issues/850
-TEMPLATEFLOW_DIR=/ZPOOL/data/tools/templateflow
-export SINGULARITYENV_TEMPLATEFLOW_HOME=/opt/templateflow
-singularity run --cleanenv \
--B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
--B $dsroot/bids:/data \
--B $dsroot/derivatives/mriqc:/out \
--B $scratch:/scratch \
-/ZPOOL/data/tools/mriqc-23.1.0.simg \
-/data /out \
-participant --participant_label $sub -w /scratch
