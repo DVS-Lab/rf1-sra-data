@@ -37,7 +37,7 @@ if [ $sub -eq 10317 ] || [ $sub -eq 10369 ] || [ $sub -eq 10402 ] || [ $sub -eq 
 	--stop-on-first-crash \
 	--me-output-echos \
 	--stop-on-first-crash \
-	--use-syn-sdc
+	--use-syn-sdc \
 	--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
 else
 	singularity run --cleanenv \
