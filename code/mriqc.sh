@@ -45,4 +45,6 @@ singularity run --cleanenv \
 -B $scratch:/scratch \
 /ZPOOL/data/tools/mriqc-23.1.0.simg \
 /data /out \
-participant --participant_label $sub -w /scratch
+participant --participant_label $sub \
+-m T1w T2w bold \
+-w /scratch
