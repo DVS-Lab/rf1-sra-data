@@ -6,7 +6,7 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 for sub in `cat ${scriptdir}/newsubs.txt` ; do
 
 	script=${scriptdir}/prepdata.sh
-	NCORES=12
+	NCORES=16
 	while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
 		sleep 5s
 	done
