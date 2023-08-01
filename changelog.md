@@ -1,4 +1,7 @@
 # Changelog
+
+(2023/08/01) - Admin - POC for Ad company switched Todd Daniels to Julia Livesey 
+
 (2023/07/30) - Admin - Begin period of ecode-only payment during Ori to Cooper cash custodian transition period 
 
 (2023/07/24) - REDCap (edit #341) - We stopped piping the data from the island screener to the Recruitment Database
