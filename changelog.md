@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/08/03) - Changed flip angle to 50 degrees after discussing with Handwerker
+
 (2023/08/01) - Admin - POC for Ad company switched Todd Daniels to Julia Livesey 
 
 (2023/07/30) - Admin - Begin period of ecode-only payment during Ori to Cooper cash custodian transition period 
