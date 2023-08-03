@@ -1,5 +1,9 @@
 # Changelog
 
+(2023/08/01) - Admin - POC for Ad company switched Todd Daniels to Julia Livesey 
+
+(2023/07/30) - Admin - Begin period of ecode-only payment during Ori to Cooper cash custodian transition period 
+
 (2023/07/24) - REDCap (edit #341) - We stopped piping the data from the island screener to the Recruitment Database
 
 (2023/07/20) - Tania said in an email with Avi  "For the TICS, the proposed cut score varies by paper. I think we could be conservative and use a cut score of 36 for people < age 75 and 33 for people > age 70. Those cut scores are based on Cook et al 2009.   Others (Knopman et al) have proposed a lower cut score of 31 but they included clinic referrals in their sample. So let’s use the more conservative cut scores. For the FAQ, the cut off is 9. If the FAQ is greater than 9, then the person should not be recruited bc that is the dementia range."
