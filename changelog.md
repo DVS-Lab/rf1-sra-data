@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/08/03) - REDCap - Changed gullibilty scale and scoring from 39 Question to 12 Question
+
 (2023/08/03) - Changed flip angle to 50 degrees after discussing with Handwerker
 
 (2023/08/01) - Admin - POC for Ad company switched Todd Daniels to Julia Livesey 
