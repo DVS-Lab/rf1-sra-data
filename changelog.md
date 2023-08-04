@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/08/04) REDCap - Edited Isalnd Screener, added visual aid for the SES ladder, and dudit questions
+
 (2023/08/03) - REDCap - Changed gullibilty scale and scoring from 39 Question to 12 Question
 
 (2023/08/03) - Changed flip angle to 50 degrees after discussing with Handwerker
