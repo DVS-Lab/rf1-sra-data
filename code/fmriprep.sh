@@ -36,9 +36,10 @@ if [ $sub -eq 10317 ] || [ $sub -eq 10369 ] || [ $sub -eq 10402 ] || [ $sub -eq 
 	participant --participant_label $sub \
 	--stop-on-first-crash \
 	--me-output-echos \
-	--stop-on-first-crash \
 	--use-syn-sdc \
-	--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
+	--cifti-output 91k \
+	--output-spaces fsLR fsaverage MNI152NLin6Asym \
+	--fs-license-file /opts/fs_license.txt -w /scratch
 else
 	singularity run --cleanenv \
 	-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
@@ -50,8 +51,9 @@ else
 	participant --participant_label $sub \
 	--stop-on-first-crash \
 	--me-output-echos \
-	--stop-on-first-crash \
-	--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
+	--cifti-output 91k \
+	--output-spaces fsLR fsaverage MNI152NLin6Asym \
+	--fs-license-file /opts/fs_license.txt -w /scratch
 fi
 
 #to add melodic, use #--aroma-melodic-dimensionality -100 \
