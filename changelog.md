@@ -1,5 +1,15 @@
 # Changelog
 
+(2023/08/10) - Updated SharedReward_5button.py dropdown menu options to include new MBME settings 
+
+(2023/08/10) - Ran Sequence Pilot 2.0 pilot visit using internal RA as subject. Need to edit PsychoPy MBME dropdown to include MB2 and ME3
+
+(2023/08/04) REDCap - Edited Isalnd Screener, added visual aid for the SES ladder, and dudit questions
+
+(2023/08/03) - REDCap - Changed gullibilty scale and scoring from 39 Question to 12 Question
+
+(2023/08/03) - Changed flip angle to 50 degrees after discussing with Handwerker
+
 (2023/08/01) - Admin - POC for Ad company switched Todd Daniels to Julia Livesey 
 
 (2023/07/30) - Admin - Begin period of ecode-only payment during Ori to Cooper cash custodian transition period 
