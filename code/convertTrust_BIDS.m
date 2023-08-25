@@ -3,7 +3,7 @@ maindir = pwd;
 %"C:\Users\tup54227\Documents\GitHub\rf1-sra\stimuli\Scan-Investment_Game\logs\10418\sub-10418_task-trust_run-1_raw.csv"
 cd ../../rf1-sra/stimuli/Scan-Investment_Game/logs
 logdir = pwd;
-
+cd(maindir)
 % Partner is Friend=3, Stranger=2, Computer=1
 % Reciprocate is Yes=1, No=0
 % cLeft is the left option
@@ -35,13 +35,13 @@ try
         
         outcomeonset = C{20}; % should be locked to the presentation of the partner cue (at least 500 ms before choice screen)
         choiceonset = C{11}; % should be locked to the presentation of the partner cue (at least 500 ms before choice screen)
-        RT = C{16};
-        Partner = C{4};
-        reciprocate = C{3};
+        RT = C{18};
+        Partner = C{5};
+        reciprocate = C{6};
         response = C{15}; % high/low -- build in check below to check recording
         trust_val = C{13}; % 0-8 (with '999' for no response)
-        cLeft = C{6};
-        cRight = C{8};
+        cLeft = C{3};
+        cRight = C{4};
         options = [cLeft cRight];
         
         fname = sprintf('sub-%05d_task-trust_run-%01d_events.tsv',subj,r+1);
@@ -92,26 +92,7 @@ try
             
         end
         fclose(fid);
-        rand_trial = randsample(1:36,1);
-        if trust_val(rand_trial) == 999
-            %fprintf('sub-%d -- Investment Game, Run %d: On trial %d, Participant did not respond.\n',subj, r+1, rand_trial);
-        else
-            if reciprocate(rand_trial)
-                participant = (8 - trust_val(rand_trial)) + ((trust_val(rand_trial) * 3)/2);
-                friend = (trust_val(rand_trial) * 3)/2;
-            else
-                participant = 8 - trust_val(rand_trial);
-                friend = (trust_val(rand_trial) * 3);
-            end
-            if (Partner(rand_trial) == 1)
-                trial_type = 'Computer';
-            elseif (Partner(rand_trial) == 2)
-                trial_type = 'Stranger';
-            elseif (Partner(rand_trial) == 3)
-                trial_type = 'Friend';
-            end
-            %fprintf('sub-%d -- Investment Game, Run %d: On trial %d, Participant WINS $%.2f and %s WINS $%.2f.\n', subj, r+1, rand_trial, participant, trial_type, friend);
-        end
+    
         fprintf(fid2,'sub-%d,run-%d,%d\n', subj, r+1, run_misses);
         
     end
