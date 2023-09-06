@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/08/28) - REDCap receipt "cash custodian" field cleared so that Dave could sign in Ori's absence
+
 (2023/08/10) - Updated SharedReward_5button.py dropdown menu options to include new MBME settings 
 
 (2023/08/10) - Ran Sequence Pilot 2.0 pilot visit using internal RA as subject. Need to edit PsychoPy MBME dropdown to include MB2 and ME3
