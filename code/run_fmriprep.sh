@@ -4,7 +4,7 @@
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 #for sub in `cat ${scriptdir}/newsubs.txt` ; do
-for sub in 10317; do
+for sub in 3003; do
 
 	script=${scriptdir}/fmriprep.sh
 	NCORES=2 # need to do on OwlsNest with datalad since each sub has 8 runs of data with 4 echoes (needs 32 processors per sub)

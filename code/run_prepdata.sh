@@ -3,8 +3,8 @@
 # ensure paths are correct irrespective from where user runs the script
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-#for sub in `cat ${scriptdir}/newsubs.txt` ; do
-for sub in 10559 10661; do
+for sub in `cat ${scriptdir}/newsubs.txt` ; do
+#for sub in 10777; do
 
 	script=${scriptdir}/prepdata.sh
 	NCORES=16

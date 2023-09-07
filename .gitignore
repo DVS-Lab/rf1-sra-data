@@ -138,11 +138,7 @@ dmypy.json
 # imaging output
 *.nii.gz
 bids
-derivatives/mriqc
-derivatives/tedana
-derivatives/fsl
-derivatives/tsnr
-derivatives/fmriprep
+derivatives
 sub-*.html
 *.asv
 

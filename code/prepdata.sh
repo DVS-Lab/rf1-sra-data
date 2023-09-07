@@ -13,7 +13,7 @@
 sourcedata=/ZPOOL/data/sourcedata/sourcedata/rf1-sra
 sub=$1
 
-except_subs=(1001 3003)
+except_subs=(1001)
 for i in "${except_subs[@]}" ; do
     if [ "$i" -eq "$sub" ] ; then
         echo "Exception ${sub}"

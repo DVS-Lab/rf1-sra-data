@@ -7,10 +7,10 @@ basedir="$(dirname "$scriptdir")"
 task=sharedreward # edit if necessary
 
 for denoise in "none";do # "tedana"
-	for ppi in "VS_thr5"; do # putting 0 first will indicate "activation" "VS_thr5"
+	for ppi in 0; do # putting 0 first will indicate "activation" "VS_thr5"
 		for model in 1; do
-		
-			for sub in `cat ${scriptdir}/newsubs.txt`; do # `ls -d ${basedir}/derivatives/fmriprep/sub-*/`
+			for sub in 3003; do
+			#for sub in `cat ${scriptdir}/newsubs.txt`; do # `ls -d ${basedir}/derivatives/fmriprep/sub-*/`
 
 			  sub=${sub#*sub-}
 			  sub=${sub%/}  

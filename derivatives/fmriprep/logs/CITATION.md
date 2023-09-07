@@ -28,16 +28,24 @@ Brain tissue segmentation of cerebrospinal fluid (CSF),
 white-matter (WM) and gray-matter (GM) was performed on
 the brain-extracted T1w using `fast` [FSL (version unknown), RRID:SCR_002823,
 @fsl_fast].
-Volume-based spatial normalization to one standard space (MNI152NLin2009cAsym) was performed through
+Brain surfaces were reconstructed using `recon-all` [FreeSurfer 7.3.2,
+RRID:SCR_001847, @fs_reconall], and the brain mask estimated
+previously was refined with a custom variation of the method to reconcile
+ANTs-derived and FreeSurfer-derived segmentations of the cortical
+gray-matter of Mindboggle [RRID:SCR_002438, @mindboggle].
+*Grayordinate* "dscalar" files [@hcppipelines] containing 91k samples were
+also generated using the highest-resolution ``fsaverage`` as an intermediate standardized
+surface space.
+Volume-based spatial normalization to two standard spaces (MNI152NLin6Asym, MNI152NLin2009cAsym) was performed through
 nonlinear registration with `antsRegistration` (ANTs (version unknown)),
 using brain-extracted versions of both T1w reference and the T1w template.
-The following template was were selected for spatial normalization
+The following templates were were selected for spatial normalization
 and accessed with *TemplateFlow* [23.0.0, @templateflow]:
-*ICBM 152 Nonlinear Asymmetrical template version 2009c* [@mni152nlin2009casym, RRID:SCR_008796; TemplateFlow ID: MNI152NLin2009cAsym].
+*FSL's MNI ICBM 152 non-linear 6th Generation Asymmetric Average Brain Stereotaxic Registration Model* [@mni152nlin6asym, RRID:SCR_002823; TemplateFlow ID: MNI152NLin6Asym], *ICBM 152 Nonlinear Asymmetrical template version 2009c* [@mni152nlin2009casym, RRID:SCR_008796; TemplateFlow ID: MNI152NLin2009cAsym].
 
 Functional data preprocessing
 
-: For each of the 8 BOLD runs found per subject (across all
+: For each of the 6 BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 by aligning and averaging 8 single-band references (SBRefs).
@@ -57,8 +65,7 @@ The calculated T2<sup>★</sup> map was then used to optimally combine preproces
 echoes following the method described in [@posse_t2s].
 The optimally combined time series was carried forward as the *preprocessed BOLD*.
 The BOLD reference was then co-registered to the T1w reference using
-`mri_coreg` (FreeSurfer) followed by `flirt` [FSL <ver>, @flirt]
-with the boundary-based registration [@bbr] cost-function.
+`bbregister` (FreeSurfer) which implements boundary-based registration [@bbr].
 Co-registration was configured with six degrees of freedom.
 First, a reference volume and its skull-stripped version were generated
  using a custom
@@ -86,7 +93,7 @@ are generated in anatomical space.
 The implementation differs from that of Behzadi et al. in that instead
 of eroding the masks by 2 pixels on BOLD space, a mask of pixels that
 likely contain a volume fraction of GM is subtracted from the aCompCor masks.
-This mask is obtained by thresholding the corresponding partial volume map at 0.05, and it ensures components are not extracted
+This mask is obtained by dilating a GM mask extracted from the FreeSurfer's *aseg* segmentation, and it ensures components are not extracted
 from voxels containing a minimal fraction of GM.
 Finally, these masks are resampled into BOLD space and binarized by
 thresholding at 0.99 (as in the original implementation).
@@ -107,10 +114,18 @@ Additional nuisance timeseries are calculated by means of principal components
 analysis of the signal found within a thin band (*crown*) of voxels around
 the edge of the brain, as proposed by [@patriat_improved_2017].
 The BOLD time-series were resampled into standard space,
-generating a *preprocessed BOLD run in MNI152NLin2009cAsym space*.
+generating a *preprocessed BOLD run in MNI152NLin6Asym space*.
 First, a reference volume and its skull-stripped version were generated
  using a custom
 methodology of *fMRIPrep*.
+The BOLD time-series were resampled onto the following surfaces
+(FreeSurfer reconstruction nomenclature):
+*fsaverage*.
+The BOLD time-series were resampled onto the left/right-symmetric template
+"fsLR" [@hcppipelines].
+*Grayordinates* files [@hcppipelines] containing 91k samples were also
+generated using the highest-resolution ``fsaverage`` as intermediate standardized
+surface space.
 All resamplings can be performed with *a single interpolation
 step* by composing all the pertinent transformations (i.e. head-motion
 transform matrices, susceptibility distortion correction when available,
@@ -123,7 +138,7 @@ Non-gridded (surface) resamplings were performed using `mri_vol2surf`
 
 Functional data preprocessing
 
-: For each of the 8 BOLD runs found per subject (across all
+: For each of the 6 BOLD runs found per subject (across all
 tasks and sessions), the following preprocessing was performed.
 First, a reference volume and its skull-stripped version were generated
 by aligning and averaging 8 single-band references (SBRefs).
@@ -143,8 +158,7 @@ The calculated T2<sup>★</sup> map was then used to optimally combine preproces
 echoes following the method described in [@posse_t2s].
 The optimally combined time series was carried forward as the *preprocessed BOLD*.
 The BOLD reference was then co-registered to the T1w reference using
-`mri_coreg` (FreeSurfer) followed by `flirt` [FSL <ver>, @flirt]
-with the boundary-based registration [@bbr] cost-function.
+`bbregister` (FreeSurfer) which implements boundary-based registration [@bbr].
 Co-registration was configured with six degrees of freedom.
 First, a reference volume and its skull-stripped version were generated
  using a custom
@@ -172,7 +186,7 @@ are generated in anatomical space.
 The implementation differs from that of Behzadi et al. in that instead
 of eroding the masks by 2 pixels on BOLD space, a mask of pixels that
 likely contain a volume fraction of GM is subtracted from the aCompCor masks.
-This mask is obtained by thresholding the corresponding partial volume map at 0.05, and it ensures components are not extracted
+This mask is obtained by dilating a GM mask extracted from the FreeSurfer's *aseg* segmentation, and it ensures components are not extracted
 from voxels containing a minimal fraction of GM.
 Finally, these masks are resampled into BOLD space and binarized by
 thresholding at 0.99 (as in the original implementation).
@@ -193,10 +207,18 @@ Additional nuisance timeseries are calculated by means of principal components
 analysis of the signal found within a thin band (*crown*) of voxels around
 the edge of the brain, as proposed by [@patriat_improved_2017].
 The BOLD time-series were resampled into standard space,
-generating a *preprocessed BOLD run in MNI152NLin2009cAsym space*.
+generating a *preprocessed BOLD run in MNI152NLin6Asym space*.
 First, a reference volume and its skull-stripped version were generated
  using a custom
 methodology of *fMRIPrep*.
+The BOLD time-series were resampled onto the following surfaces
+(FreeSurfer reconstruction nomenclature):
+*fsaverage*.
+The BOLD time-series were resampled onto the left/right-symmetric template
+"fsLR" [@hcppipelines].
+*Grayordinates* files [@hcppipelines] containing 91k samples were also
+generated using the highest-resolution ``fsaverage`` as intermediate standardized
+surface space.
 All resamplings can be performed with *a single interpolation
 step* by composing all the pertinent transformations (i.e. head-motion
 transform matrices, susceptibility distortion correction when available,
