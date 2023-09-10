@@ -1,5 +1,11 @@
 # Changelog
 
+Params generated for first SP2 subject. Proper syntax will be #####sp to adhere to BIDS formatting
+
+(2023/09/10) - Sharedreward_5button.py edited for use in SP2 (MB and ME options updated, IP added) 
+
+(2023/09/10) - Sequence Pilot 2.0 restarting, used old protocols from SP1. New protocols copied and 6 counterbalances created. 
+
 (2023/08/28) - REDCap receipt "cash custodian" field cleared so that Dave could sign in Ori's absence
 
 (2023/08/10) - Updated SharedReward_5button.py dropdown menu options to include new MBME settings 
