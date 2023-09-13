@@ -10,7 +10,7 @@
 
 (2023/08/10) - Updated SharedReward_5button.py dropdown menu options to include new MBME settings 
 
-(2023/08/10) - Ran Sequence Pilot 2.0 pilot visit using internal RA as subject. Need to edit PsychoPy MBME dropdown to include MB2 and ME3
+(2023/08/10) - Ran Sequence Pilot 2.0 pilot visit using internal RA as subject. 
 
 (2023/08/04) REDCap - Edited Isalnd Screener, added visual aid for the SES ladder, and dudit questions
 
