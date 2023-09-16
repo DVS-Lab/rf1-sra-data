@@ -13,6 +13,7 @@ ntasks=10
 counter=0
 while [ $counter -lt ${#myArray[@]} ]; do
 	subjects=${myArray[@]:$counter:$ntasks}
+	echo $subjects
 	let counter=$counter+$ntasks
-	qsub -v subjects=("${subjects[@]}") fmriprep-hpc.sh
+	qsub -F "${subjects[@]}" fmriprep-hpc.sh
 done

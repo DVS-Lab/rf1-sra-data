@@ -18,6 +18,7 @@ bidsdir=$maindir/bids
 logdir=$maindir/logs
 mkdir -p $logdir
 
+subjects=("${!1}")
 
 rm -f $logdir/cmd_fmriprep_${PBS_JOBID}.txt
 touch $logdir/cmd_fmriprep_${PBS_JOBID}.txt
