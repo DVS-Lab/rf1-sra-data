@@ -5,7 +5,7 @@ maindir=~/work/rf1-sra-data #this should be the only line that has to change if 
 scriptdir=$maindir/code
 
 
-mapfile -t myArray < ${scriptdir}/newsubs_rf1-sra-data.txt
+mapfile -t myArray < ${scriptdir}/newsubs_fmap-test.txt
 
 
 # grab the first 10 elements
