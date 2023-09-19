@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/09/19) - Added fast T1 to RF1-SRA protocol in the event that participant needs to get out between runs
+
 (2023/09/19) - Added ECog-12 to Island Screener for MCI assessment 
 
 (2023/09/10) - Params generated for first SP2 subject. Proper syntax will be #####sp to adhere to BIDS formatting
