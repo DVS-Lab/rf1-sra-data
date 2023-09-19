@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/09/19) - Added ECog-12 to Island Screener for MCI assessment 
+
 (2023/09/10) - Params generated for first SP2 subject. Proper syntax will be #####sp to adhere to BIDS formatting
 
 (2023/09/10) - Sharedreward_5button.py edited for use in SP2 (MB and ME options updated, IP added) 
