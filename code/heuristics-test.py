@@ -6,9 +6,9 @@ def create_key(template, outtype=('nii.gz',), annotation_classes=None):
     return template, outtype, annotation_classes
 
 def infotodict(seqinfo):
-	t1w = create_key('sub-{subject}/anat/sub-{subject}_T1w')
-	mag = create_key('sub-{subject}/fmap/sub-{subject}_acq-bold_magnitude')
-	phase = create_key('sub-{subject}/fmap/sub-{subject}_acq-bold_phasediff')
+	t1w = create_key('sub-{subject}/anat/sub-{subject}_run-{item:d}_T1w')
+	mag = create_key('sub-{subject}/fmap/sub-{subject}_acq-bold_run-{item:d}_magnitude')
+	phase = create_key('sub-{subject}/fmap/sub-{subject}_acq-bold_run-{item:d}_phasediff')
 	t2_flair = create_key('sub-{subject}/anat/sub-{subject}_FLAIR')
 	trust = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_bold')
 	trust_sbref = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_sbref')
@@ -49,11 +49,11 @@ def infotodict(seqinfo):
 
 	for s in seqinfo:
 	     if ('T1w-anat_mpg_07sag_iso' in s.protocol_name) and ('NORM' in s.image_type):
-	         info[t1w] = [s.series_id]
+	         info[t1w].append(s.series_id)
 	     if ('gre_field' in s.protocol_name) and ('NORM' in s.image_type):
-	         info[mag] = [s.series_id]
+	         info[mag].append(s.series_id)
 	     if ('gre_field' in s.protocol_name) and ('P' in s.image_type):
-	         info[phase] = [s.series_id]
+	         info[phase].append(s.series_id)
 	     if ('t2_tse_dark-fluid_tra_p3' in s.protocol_name) and (s.dim3 == 47):
 	     		info[t2_flair] = [s.series_id]
 
@@ -92,6 +92,6 @@ def infotodict(seqinfo):
 	return info
 
 POPULATE_INTENDED_FOR_OPTS = {
-        'matching_parameters': ['Shims', 'ModalityAcquisitionLabel'],
+        'matching_parameters': ['Shims'],
         'criterion': 'Closest'
 }
