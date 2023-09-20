@@ -92,6 +92,6 @@ def infotodict(seqinfo):
 	return info
 
 POPULATE_INTENDED_FOR_OPTS = {
-        'matching_parameters': ['Shims'],
+        'matching_parameters': ['ModalityAcquisitionLabel'],
         'criterion': 'Closest'
 }
