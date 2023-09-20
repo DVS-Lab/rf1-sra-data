@@ -26,15 +26,14 @@ done
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 dsroot="$(dirname "$scriptdir")"
 
-echo ${dsroot}
 
 # make bids folder if it doesn't exist
-if [ ! -d $dsroot/bids-test ]; then
-	mkdir -p $dsroot/bids-test
+if [ ! -d $dsroot/bids-test2 ]; then
+	mkdir -p $dsroot/bids-test2
 fi
 
 # overwrite existing
-rm -rf $dsroot/bids-test/sub-${sub}
+rm -rf $dsroot/bids-test2/sub-${sub}
 
 
 # PART 1: running heudiconv and fixing fieldmaps
@@ -43,7 +42,7 @@ singularity run --cleanenv \
 -B $sourcedata:/sourcedata \
 /ZPOOL/data/tools/heudiconv-0.13.1.sif \
 -d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
--o /out/bids-test/ \
+-o /out/bids-test2/ \
 -f /out/code/heuristics-test.py \
 -s $sub \
 -c dcm2niix \

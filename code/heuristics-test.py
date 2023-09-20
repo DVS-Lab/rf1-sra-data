@@ -93,5 +93,5 @@ def infotodict(seqinfo):
 
 POPULATE_INTENDED_FOR_OPTS = {
         'matching_parameters': ['ModalityAcquisitionLabel'],
-        'criterion': 'Closest'
+        'criterion': 'First'
 }
