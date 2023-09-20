@@ -1,4 +1,5 @@
 # Changelog
+(2023/09/20) Added FAQ skeleton to island screener
 
 (2023/09/19) - Added fast T1 to RF1-SRA protocol in the event that participant needs to get out between runs
 
