@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/09/28) - Changes made to IOS to include the partners that the participant could be playing with during real scan runs
+
 (2023/09/26) - Facebook Ad paused ____ responses collected 
 
 (2023/09/20) - JSON files for subs with two localizers and no fmaps edited to exclude post-localizer fmapless functional runs
