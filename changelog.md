@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/09/29) - First participant (10719) ran under new IOS protocol
+
 (2023/09/28) - REDCap instruments moved for organization in RF1 SRPAL project
 
 (2023/09/28) - Changes made to IOS to include the partners that the participant could be playing with during real scan runs
