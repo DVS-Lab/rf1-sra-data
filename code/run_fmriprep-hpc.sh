@@ -9,7 +9,7 @@ mapfile -t myArray < ${scriptdir}/newsubs_fmap-test.txt
 
 
 # grab the first 10 elements
-ntasks=10
+ntasks=2
 counter=0
 while [ $counter -lt ${#myArray[@]} ]; do
 	subjects=${myArray[@]:$counter:$ntasks}
