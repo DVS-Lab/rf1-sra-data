@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/10/10) - REDCap Added repeating instance to Recruitment database Subject Information for snowball payment
+
 (2023/09/09) - REDCap Moved the travel reimbursement question from payment info to reciept
 
 (2023/09/29) - First participant (10719) ran under new IOS protocol
