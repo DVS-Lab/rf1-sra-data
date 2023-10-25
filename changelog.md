@@ -1,5 +1,9 @@
 # Changelog
 
+(2023/24/10) - Suchita recruitment shift added (9 - 12 Monday, 4:30 - 7:30 Tuesday, 1- 5 Saturday)
+
+(2023/23/10) - Mariami recrutiment shift added (12 - 3 Wednesday, 3 - 5 Thursday)
+
 (2023/10/10) - REDCap Added repeating instance to Recruitment database Subject Information for snowball payment
 
 (2023/09/09) - REDCap Moved the travel reimbursement question from payment info to reciept
