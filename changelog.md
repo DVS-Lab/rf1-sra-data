@@ -1,6 +1,8 @@
 # Changelog
 
-(2023/10/31) - 
+(2023/10/31) - Imported 10317 data (ses) from RF1 to IS 
+
+(2023/10/31) - Imported 10559 data (audit, dudit, usi, fevs, pmas, pam, mspss, ses) from RF1 to IS 
 
 (2023/10/27) - card_guessing_ratings.py script not working -- error calling file on line 80
 
