@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/27/10) - card_guessing_ratings.py script not working -- error calling file on line 80
+
 (2023/24/10) - Suchita recruitment shift added (9 - 12 Monday, 4:30 - 7:30 Tuesday, 1- 5 Saturday)
 
 (2023/23/10) - Mariami recrutiment shift added (12 - 3 Wednesday, 3 - 5 Thursday)
