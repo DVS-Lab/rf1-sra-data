@@ -136,8 +136,8 @@ dmypy.json
 .heudiconv
 
 # imaging output
-*.nii.gz
-bids
+bids/**/*.nii.gz
+bids/**/*.json
 derivatives
 sub-*.html
 *.asv
