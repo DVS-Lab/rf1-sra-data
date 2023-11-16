@@ -1,6 +1,8 @@
 # Changelog
 
-(2023/2/11) - Imported 5 participants' FEVS data (RF1_10391a, RF1_10462a, RF1_10486, RF1_10541, RF1_10581) from RF1 to IS
+(2023/11/15) - Added attention checks and quality commitment to the Island Screener within FEVS, DOSPERT, and Metal Screener
+
+(2023/11/2) - Imported 5 participants' FEVS data (RF1_10391a, RF1_10462a, RF1_10486, RF1_10541, RF1_10581) from RF1 to IS
 
 (2023/10/31) - Imported 10317 data (ses) from RF1 to IS 
 
