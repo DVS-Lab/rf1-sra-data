@@ -1,5 +1,9 @@
 # Changelog
 
+(2023/11/22) - Downloaded all RF1 consents as a zip onto Avi's computer
+
+(2023/11/22) - Deleted 10666 data
+
 (2023/11/15) - Added attention checks and quality commitment to the Island Screener within FEVS, DOSPERT, and Metal Screener
 
 (2023/11/2) - Imported 5 participants' FEVS data (RF1_10391a, RF1_10462a, RF1_10486, RF1_10541, RF1_10581) from RF1 to IS
