@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/11/22) - Consents using the 5/24/2023 consent form have been downloaded for record in REDCap file repository. 10608, 10713, 10781, 10783 needed to be manually downloaded since they were marked as incomplete. 
+
 (2023/11/22) - Downloaded all RF1 consents as a zip onto Avi's computer
 
 (2023/11/22) - Deleted 10666 data
