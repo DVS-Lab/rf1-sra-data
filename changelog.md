@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/11/27) - Fixed card_guessing_ratings.py by adding SRratings.csv back from being accidentally deleted
+
 (2023/11/27) - Added KBIT-2 Matrices to the REDCap
 
 (2023/11/22) - Consents using the 5/24/2023 consent form have been downloaded for record in REDCap file repository. 10608, 10713, 10781, 10783 needed to be manually downloaded since they were marked as incomplete. 
