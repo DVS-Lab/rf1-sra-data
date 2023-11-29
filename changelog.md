@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/11/29) - Brief Biosocial Gambling Screener and UCLA Lonliness Scale added to Island Screener
+
 (2023/11/27) - Fixed card_guessing_ratings.py by adding SRratings.csv back from being accidentally deleted
 
 (2023/11/27) - Added KBIT-2 Matrices to the REDCap
