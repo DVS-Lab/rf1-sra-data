@@ -1,6 +1,8 @@
 # Changelog
 
-(2023/12/4) - Made all of the questions in mock scan questionnaires required fields.
+(2023/12/04) - Deleted old EROS calculated subscales, and added four correct EROS subscales
+
+(2023/12/04) - Made all of the questions in mock scan questionnaires required fields.
 
 (2023/11/29) - Brief Biosocial Gambling Screener and UCLA Lonliness Scale added to Island Screener
 
