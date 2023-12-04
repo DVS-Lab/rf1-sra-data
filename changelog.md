@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/12/4) - Made all of the questions in mock scan questionnaires required fields.
+
 (2023/11/29) - Brief Biosocial Gambling Screener and UCLA Lonliness Scale added to Island Screener
 
 (2023/11/27) - Fixed card_guessing_ratings.py by adding SRratings.csv back from being accidentally deleted
