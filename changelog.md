@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/12/05) - Edited mock scan intro ppt by converting to PDF
+
 (2023/12/04) - Deleted old EROS calculated subscales, and added four correct EROS subscales
 
 (2023/12/04) - Made all of the questions in mock scan questionnaires required fields.
