@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/12/05) - Consents for RF1 and Island Screener REDCap Projects updated to the 11/20/23 approved versions
+
 (2023/12/05) - Edited mock scan intro ppt by converting to PDF
 
 (2023/12/04) - Deleted old EROS calculated subscales, and added four correct EROS subscales
