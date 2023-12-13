@@ -1,34 +1,36 @@
 # Changelog
 
-(2023/12/12) - Consents for Friend in Recruitment Database updated to 11/20/23 versions
+(2023/12/13) - REDCap - Appointment 2 covid data consolidated to the 'Covid19 Tubric Screener 2' instrument in the 'fMRI Session Questionnaires' event
 
-(2023/12/05) - Consents for RF1 and Island Screener REDCap Projects updated to the 11/20/23 approved versions
+(2023/12/12) - REDCap - Consents for Friend in Recruitment Database updated to 11/20/23 versions
+
+(2023/12/05) - REDCap - Consents for RF1 and Island Screener REDCap Projects updated to the 11/20/23 approved versions
 
 (2023/12/05) - Edited mock scan intro ppt by converting to PDF
 
-(2023/12/04) - Deleted old EROS calculated subscales, and added four correct EROS subscales
+(2023/12/04) - REDCap - Deleted old EROS calculated subscales, and added four correct EROS subscales
 
-(2023/12/04) - Made all of the questions in mock scan questionnaires required fields.
+(2023/12/04) - REDCap - Made all of the questions in mock scan questionnaires required fields.
 
-(2023/11/29) - Brief Biosocial Gambling Screener and UCLA Lonliness Scale added to Island Screener
+(2023/11/29) - REDCap - Brief Biosocial Gambling Screener and UCLA Lonliness Scale added to Island Screener
 
 (2023/11/27) - Fixed card_guessing_ratings.py by adding SRratings.csv back from being accidentally deleted
 
-(2023/11/27) - Added KBIT-2 Matrices to the REDCap
+(2023/11/27) - REDCap - Added KBIT-2 Matrices to the REDCap
 
 (2023/11/22) - Consents using the 5/24/2023 consent form have been downloaded for record in REDCap file repository. 10608, 10713, 10781, 10783 needed to be manually downloaded since they were marked as incomplete. 
 
 (2023/11/22) - Downloaded all RF1 consents as a zip onto Avi's computer
 
-(2023/11/22) - Deleted 10666 data
+(2023/11/22) - REDCap - Deleted 10666 data
 
 (2023/11/15) - Added attention checks and quality commitment to the Island Screener within FEVS, DOSPERT, and Metal Screener
 
-(2023/11/2) - Imported 5 participants' FEVS data (RF1_10391a, RF1_10462a, RF1_10486, RF1_10541, RF1_10581) from RF1 to IS
+(2023/11/2) - REDCap - Imported 5 participants' FEVS data (RF1_10391a, RF1_10462a, RF1_10486, RF1_10541, RF1_10581) from RF1 to IS
 
-(2023/10/31) - Imported 10317 data (ses) from RF1 to IS 
+(2023/10/31) - REDCap - Imported 10317 data (ses) from RF1 to IS 
 
-(2023/10/31) - Imported 10559 data (audit, dudit, usi, fevs, pmas, pam, mspss, ses) from RF1 to IS 
+(2023/10/31) - REDCap - Imported 10559 data (audit, dudit, usi, fevs, pmas, pam, mspss, ses) from RF1 to IS 
 
 (2023/10/27) - card_guessing_ratings.py script not working -- error calling file on line 80
 
@@ -36,15 +38,15 @@
 
 (2023/10/23) - Mariami recrutiment shift added (12 - 3 Wednesday, 3 - 5 Thursday)
 
-(2023/10/10) - REDCap Added repeating instance to Recruitment database Subject Information for snowball payment
+(2023/10/10) - REDCap - Added repeating instance to Recruitment database Subject Information for snowball payment
 
-(2023/09/09) - REDCap Moved the travel reimbursement question from payment info to reciept
+(2023/09/09) - REDCap - Moved the travel reimbursement question from payment info to reciept
 
 (2023/09/29) - First participant (10719) ran under new IOS protocol
 
 (2023/09/28) - Huiling cleared batch of subs from XNAT
 
-(2023/09/28) - REDCap instruments moved for organization in RF1 SRPAL project (blood pressure seperated from session notes)
+(2023/09/28) - REDCap - instruments moved for organization in RF1 SRPAL project (blood pressure seperated from session notes)
 
 (2023/09/28) - Changes made to IOS to include the partners that the participant could be playing with during real scan runs
 
@@ -52,7 +54,7 @@
 
 (2023/09/20) - JSON files for subs with two localizers and no fmaps edited to exclude post-localizer fmapless functional runs
 
-(2023/09/20) - Imported FAQ data from rec database to island screener
+(2023/09/20) - REDCap - Imported FAQ data from rec database to island screener
 
 (2023/09/19) - Added fast T1 to RF1-SRA protocol in the event that participant needs to get out between runs
 
@@ -68,13 +70,13 @@
 
 (2023/09/10) - Sequence Pilot 2.0 restarting, used old protocols from SP1. New protocols copied and 6 counterbalances created. 
 
-(2023/08/28) - REDCap receipt "cash custodian" field cleared so that Dave could sign in Ori's absence
+(2023/08/28) - REDCap - receipt "cash custodian" field cleared so that Dave could sign in Ori's absence
 
 (2023/08/10) - Updated SharedReward_5button.py dropdown menu options to include new MBME settings 
 
 (2023/08/10) - Ran Sequence Pilot 2.0 pilot visit using internal RA as subject. 
 
-(2023/08/04) REDCap - Edited Isalnd Screener, added visual aid for the SES ladder, and dudit questions
+(2023/08/04) - REDCap - Edited Isalnd Screener, added visual aid for the SES ladder, and dudit questions
 
 (2023/08/03) - REDCap - Changed gullibilty scale and scoring from 39 Question to 12 Question
 
