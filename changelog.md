@@ -1,5 +1,7 @@
 # Changelog
 
+(2023/23/25) - REDCap - Downloaded a version of 10555 and 10657 payment info in prep for cross event consolidation since they have repeat instances that cannot be moved across events. They now exist in a folder called 'Payment Info' in project 1146's file repository. 
+
 (2023/12/13) - REDCap - Appointment 2 covid data consolidated to the 'Covid19 Tubric Screener 2' instrument in the 'fMRI Session Questionnaires' event
 
 (2023/12/12) - REDCap - Consents for Friend in Recruitment Database updated to 11/20/23 versions
