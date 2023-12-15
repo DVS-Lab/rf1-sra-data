@@ -1,6 +1,6 @@
 # Changelog
 
-(2023/23/15) - REDCap - Receipt dat consolidated to the 'Receipt' instrument in the 'fMRI Session Questionnaires' event
+(2023/23/15) - REDCap - Receipt data consolidated to the 'Receipt' instrument in the 'fMRI Session Questionnaires' event
 
 (2023/23/15) - REDCap - Payment Info data consiladated to the 'Payment Info' instrument in the 'fMRI Session Questionnaires' event
 
