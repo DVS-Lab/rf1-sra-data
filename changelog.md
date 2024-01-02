@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/01/02) - REDCap - Added the missing 's' in 'thinks' to gs_adult_20 in the RF1 project
+
 (2023/23/15) - REDCap - Receipt data consolidated to the 'Receipt' instrument in the 'fMRI Session Questionnaires' event
 
 (2023/23/15) - REDCap - Payment Info data consiladated to the 'Payment Info' instrument in the 'fMRI Session Questionnaires' event
