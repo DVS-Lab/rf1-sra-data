@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/01/03) - Set the date of the sub_dateupdated variable (PID 1146) to today for 10310_BE, 10326_BE, 10337_BE, 10358_BE, 10592, 10694, 10737, 10771, 10824, 10834, 10847, 10864, 10871, 10878, and 10824
+
 (2024/01/03) - Re-sent the receipts to the two particpants who were missing signatures: 10836 and 10652. 10836 was Karen and Ronan's visit, and 10652 was sent the full payment in giftcards in the receipt.
 
 (2024/01/02) - REDCap - Added the missing 's' in 'thinks' to gs_adult_20 in the RF1 project
