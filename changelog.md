@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/01/03) - Re-sent the receipts to the two particpants who were missing signatures: 10836 and 10652. 10836 was Karen and Ronan's visit, and 10652 was sent the full payment in giftcards in the receipt.
+
 (2024/01/02) - REDCap - Added the missing 's' in 'thinks' to gs_adult_20 in the RF1 project
 
 (2023/23/15) - REDCap - Receipt data consolidated to the 'Receipt' instrument in the 'fMRI Session Questionnaires' event
