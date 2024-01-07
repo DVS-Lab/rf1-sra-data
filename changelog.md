@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/01/07) - New receipt made for 55+ recall participants
+
 (2024/01/03) - Sam Yelman piped the receipt signatures for 10555, 10559 and 10590 from the second instance of the receipt to the first instance of the receipt, and I manually copied the rest of the information over.
 
 (2024/01/03) - Set the date of the sub_dateupdated variable (PID 1146) to today for 10310_BE, 10326_BE, 10337_BE, 10358_BE, 10592, 10694, 10737, 10771, 10824, 10834, 10847, 10864, 10871, 10878, and 10824
