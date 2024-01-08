@@ -1,5 +1,9 @@
 # Changelog
 
+(2024/01/08) - 10590 and 10418 recall receipts were done before auto survey archive was turned on, so they were downloaded and put in manually
+
+(2024/01/08) - First two 55+ recall visits
+
 (2024/01/07) - New receipt made for 55+ recall participants
 
 (2024/01/03) - Sam Yelman piped the receipt signatures for 10555, 10559 and 10590 from the second instance of the receipt to the first instance of the receipt, and I manually copied the rest of the information over.
