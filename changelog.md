@@ -1,6 +1,8 @@
 # Changelog
 
-(2024/01/08) - 10590 and 10418 recall receipts were done before auto survey archive was turned on, so they were downloaded and put in manually
+(2024/01/08) - Fixed typos in pnr_adult_(p7,p8,n6,n7) in Extra Time Questionnaires
+
+(2024/01/08) - 10418 recall receipt was done before auto survey archive was turned on, so it downloaded and put in manually.
 
 (2024/01/08) - First two 55+ recall visits
 
