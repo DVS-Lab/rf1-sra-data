@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/01/11) - deleted Island Screener 953 (duplicate of 1573 but without FEVS)
+
 (2024/01/08) - Fixed typos in pnr_adult_(p7,p8,n6,n7) in Extra Time Questionnaires
 
 (2024/01/08) - First two 55+ recall visits
