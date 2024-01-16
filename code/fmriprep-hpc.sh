@@ -48,7 +48,7 @@ for sub in ${subjects[@]}; do
 		-B $maindir:/base \
 		-B ~/work/tools/licenses:/opts \
 		-B $scratchdir:/scratch \
-		~/work/tools/fmriprep-23.1.4.simg \
+		~/work/tools/fmriprep-23.2.0.simg \
 		/base/bids /base/derivatives/fmriprep \
 		participant --participant_label $sub \
 		--stop-on-first-crash \
@@ -67,7 +67,7 @@ for sub in ${subjects[@]}; do
 		-B $maindir:/base \
 		-B ~/work/tools/licenses:/opts \
 		-B $scratchdir:/scratch \
-		~/work/tools/fmriprep-23.1.3.simg \
+		~/work/tools/fmriprep-23.2.0.simg \
 		/base/bids /base/derivatives/fmriprep \
 		participant --participant_label $sub \
 		--stop-on-first-crash \
