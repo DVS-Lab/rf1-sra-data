@@ -1,0 +1,460 @@
+.
+INFO: Running heudiconv version 0.13.1 latest 1.0.1
+Traceback (most recent call last):
+  File "/opt/miniconda-py39_4.12.0/bin/heudiconv", line 8, in <module>
+    sys.exit(main())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 30, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 392, in workflow
+    heuristic_mod = load_heuristic(heuristic)
+  File "/src/heudiconv/heudiconv/utils.py", line 402, in load_heuristic
+    mod = __import__(fname.split(".")[0])
+ModuleNotFoundError: No module named 'heuristics'
+defacing subject 2004
+.
+INFO: Running heudiconv version 0.13.1 latest 1.0.1
+Traceback (most recent call last):
+  File "/opt/miniconda-py39_4.12.0/bin/heudiconv", line 8, in <module>
+    sys.exit(main())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 30, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 392, in workflow
+    heuristic_mod = load_heuristic(heuristic)
+  File "/src/heudiconv/heudiconv/utils.py", line 402, in load_heuristic
+    mod = __import__(fname.split(".")[0])
+ModuleNotFoundError: No module named 'heuristics'
+defacing subject 10559
+.
+INFO: Running heudiconv version 0.13.1 latest 1.0.1
+Traceback (most recent call last):
+  File "/opt/miniconda-py39_4.12.0/bin/heudiconv", line 8, in <module>
+    sys.exit(main())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 30, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 392, in workflow
+    heuristic_mod = load_heuristic(heuristic)
+  File "/src/heudiconv/heudiconv/utils.py", line 402, in load_heuristic
+    mod = __import__(fname.split(".")[0])
+ModuleNotFoundError: No module named 'heuristics'
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmppamebtuz.mat
+  /tmp/tmp8_gc4a3a.nii.gz
+Defacing...
+  ./bids/sub-2004/anat/sub-2004_T1w.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmpy0y8o47q.mat
+  /tmp/tmp9o5jk6e3.nii.gz
+Defacing...
+  ./bids/sub-10559/anat/sub-10559_T1w.nii.gz
+    flirt.inputs.reference = infile
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-2004/anat/sub-2004_T1w.nii.gz' <class 'str'> was specified.
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10559/anat/sub-10559_T1w.nii.gz' <class 'str'> was specified.
+defacing subject 10661
+mv: cannot stat './bids/sub-2004/anat/sub-2004_T1w_defaced.nii.gz': No such file or directory
+mv: cannot stat './bids/sub-10559/anat/sub-10559_T1w_defaced.nii.gz': No such file or directory
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmp5t1hksum.mat
+  /tmp/tmpbsbib7rp.nii.gz
+Defacing...
+  ./bids/sub-10661/anat/sub-10661_T1w.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10661/anat/sub-10661_T1w.nii.gz' <class 'str'> was specified.
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmphnf2b8g8.mat
+  /tmp/tmpytrkikeh.nii.gz
+Defacing...
+  ./bids/sub-2004/anat/sub-2004_FLAIR.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-2004/anat/sub-2004_FLAIR.nii.gz' <class 'str'> was specified.
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmp2v14dgym.mat
+  /tmp/tmpmk3xnud9.nii.gz
+Defacing...
+  ./bids/sub-10559/anat/sub-10559_FLAIR.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10559/anat/sub-10559_FLAIR.nii.gz' <class 'str'> was specified.
+mv: cannot stat './bids/sub-10661/anat/sub-10661_T1w_defaced.nii.gz': No such file or directory
+mv: cannot stat './bids/sub-2004/anat/sub-2004_FLAIR_defaced.nii.gz': No such file or directory
+mv: cannot stat './bids/sub-10559/anat/sub-10559_FLAIR_defaced.nii.gz': No such file or directory
+scrubbing ./bids/sub-2004/sub-2004_scans.tsv
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-sra-data/code/shiftdates.py", line 42, in <module>
+    df = pd.read_csv(scan, sep = '\t')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+scrubbing ./bids/sub-10559/sub-10559_scans.tsv
+    return func(*args, **kwargs)
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-sra-data/code/shiftdates.py", line 42, in <module>
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    df = pd.read_csv(scan, sep = '\t')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+                   ^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/common.py", line 856, in get_handle
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+    handle = open(
+             ^^^^^
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './bids/sub-2004/sub-2004_scans.tsv'
+FileNotFoundError: [Errno 2] No such file or directory: './bids/sub-10559/sub-10559_scans.tsv'
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmpxou267ku.mat
+  /tmp/tmpfn2b3kpk.nii.gz
+Defacing...
+  ./bids/sub-10661/anat/sub-10661_FLAIR.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10661/anat/sub-10661_FLAIR.nii.gz' <class 'str'> was specified.
+mv: cannot stat './bids/sub-10661/anat/sub-10661_FLAIR_defaced.nii.gz': No such file or directory
+scrubbing ./bids/sub-10661/sub-10661_scans.tsv
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-sra-data/code/shiftdates.py", line 42, in <module>
+    df = pd.read_csv(scan, sep = '\t')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './bids/sub-10661/sub-10661_scans.tsv'
+.
+INFO: Running heudiconv version 0.13.1 latest 1.0.1
+Traceback (most recent call last):
+  File "/opt/miniconda-py39_4.12.0/bin/heudiconv", line 8, in <module>
+    sys.exit(main())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 30, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 392, in workflow
+    heuristic_mod = load_heuristic(heuristic)
+  File "/src/heudiconv/heudiconv/utils.py", line 402, in load_heuristic
+    mod = __import__(fname.split(".")[0])
+ModuleNotFoundError: No module named 'heuristics'
+defacing subject 10713
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmpp0bk9eqi.mat
+  /tmp/tmpt54n0zx7.nii.gz
+Defacing...
+  ./bids/sub-10713/anat/sub-10713_T1w.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10713/anat/sub-10713_T1w.nii.gz' <class 'str'> was specified.
+mv: cannot stat './bids/sub-10713/anat/sub-10713_T1w_defaced.nii.gz': No such file or directory
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmpf_howj1q.mat
+  /tmp/tmp_afsz3ns.nii.gz
+Defacing...
+  ./bids/sub-10713/anat/sub-10713_FLAIR.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10713/anat/sub-10713_FLAIR.nii.gz' <class 'str'> was specified.
+mv: cannot stat './bids/sub-10713/anat/sub-10713_FLAIR_defaced.nii.gz': No such file or directory
+scrubbing ./bids/sub-10713/sub-10713_scans.tsv
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-sra-data/code/shiftdates.py", line 42, in <module>
+    df = pd.read_csv(scan, sep = '\t')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './bids/sub-10713/sub-10713_scans.tsv'
+.
+INFO: Running heudiconv version 0.13.1 latest 1.0.1
+Traceback (most recent call last):
+  File "/opt/miniconda-py39_4.12.0/bin/heudiconv", line 8, in <module>
+    sys.exit(main())
+  File "/src/heudiconv/heudiconv/cli/run.py", line 30, in main
+    workflow(**kwargs)
+  File "/src/heudiconv/heudiconv/main.py", line 392, in workflow
+    heuristic_mod = load_heuristic(heuristic)
+  File "/src/heudiconv/heudiconv/utils.py", line 402, in load_heuristic
+    mod = __import__(fname.split(".")[0])
+ModuleNotFoundError: No module named 'heuristics'
+defacing subject 10810
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmpg5a2su_4.mat
+  /tmp/tmp6nggrprl.nii.gz
+Defacing...
+  ./bids/sub-10810/anat/sub-10810_T1w.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10810/anat/sub-10810_T1w.nii.gz' <class 'str'> was specified.
+mv: cannot stat './bids/sub-10810/anat/sub-10810_T1w_defaced.nii.gz': No such file or directory
+--------------
+pydeface 2.0.2
+--------------
+Temporary files:
+  /tmp/tmpfx8m0ld6.mat
+  /tmp/tmp4f5f9yfx.nii.gz
+Defacing...
+  ./bids/sub-10810/anat/sub-10810_FLAIR.nii.gz
+Traceback (most recent call last):
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/bin/pydeface", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/__main__.py", line 95, in main
+    pdu.deface_image(**vars(args))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pydeface/utils.py", line 99, in deface_image
+    flirt.inputs.reference = infile
+    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 330, in validate
+    value = super(File, self).validate(objekt, name, value, return_pathlike=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/nipype/interfaces/base/traits_extension.py", line 135, in validate
+    self.error(objekt, name, str(value))
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/traits/base_trait_handler.py", line 74, in error
+    raise TraitError(
+traits.trait_errors.TraitError: The 'reference' trait of a FLIRTInputSpec instance must be a pathlike object or string representing an existing file, but a value of 'bids/sub-10810/anat/sub-10810_FLAIR.nii.gz' <class 'str'> was specified.
+mv: cannot stat './bids/sub-10810/anat/sub-10810_FLAIR_defaced.nii.gz': No such file or directory
+scrubbing ./bids/sub-10810/sub-10810_scans.tsv
+Traceback (most recent call last):
+  File "/ZPOOL/data/projects/rf1-sra-data/code/shiftdates.py", line 42, in <module>
+    df = pd.read_csv(scan, sep = '\t')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "/ZPOOL/data/tools/anaconda/tun31934/anaconda3/lib/python3.11/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './bids/sub-10810/sub-10810_scans.tsv'
