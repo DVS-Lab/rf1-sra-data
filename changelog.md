@@ -1,5 +1,9 @@
 # Changelog
 
+(2024/02/07) - REDCap - Avi manually copied 10716's data from the RF1 project to the Island screener
+
+(2024/02/06) - REDCap - Re-ordered the Island screener so the longest surveys are at the end. Old order: audit, dudit, usi, fevs, promis, pmas, pam, mpss, ses, fraud, dospert, faq, ecog, bbgs, uclal
+
 (2024/02/05) - Began FEVS, BBGS, and UCLAL recall. Also fixed SES scoring variables in the Island Screener.
 
 (2024/01/11) - deleted Island Screener 953 (duplicate of 1573 but without FEVS)
