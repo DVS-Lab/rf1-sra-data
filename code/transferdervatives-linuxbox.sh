@@ -7,12 +7,14 @@ basedir="$(dirname "$scriptdir")"
 read -p "Enter AccessNet ID: " destination_user
 
 source_directory="/home/${destination_user}/work/rf1-sra-data/derivatives/fmriprep"
-destination_server="@cla18994.tu.temple.edu"
+destination_server="@cla18994.tu.temple.edu:"
 destination_path="/ZPOOL/data/projects/rf1-sra-data/derivatives/fmriprep"
 
 for sub in `cat ${basedir}/code/sublist_new.txt`; do
-	source_file="$source_directory/sub-$sub"
-	rsync -avh --no-compress --progress "$source_file" "$destination_user""$destination_server""$destination_path"
+	der_files="$source_directory/sub-$sub"
+	html_files="$source_directory/sub-$sub.html"
+	rsync -avh --no-compress --progress "$der_files" "$destination_user""$destination_server""$destination_path"
+	rsync -avh --no-compress --progress "$html_files" "$destination_user""$destination_server""$destination_path"
 done
 
 exit   
