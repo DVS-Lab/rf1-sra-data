@@ -14,7 +14,7 @@ MAINOUTPUT=${maindir}/derivatives/fsl/sub-${sub}
 
 
 # --- start EDIT HERE start: exceptions and conditionals for the task
-NCOPES=16
+NCOPES=20
 
 # ppi has more contrasts than act (phys), so need a different L2 template
 if [ "${type}" == "act" ]; then

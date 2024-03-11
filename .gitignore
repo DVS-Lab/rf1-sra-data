@@ -139,6 +139,7 @@ dmypy.json
 bids/**/*.nii.gz
 bids/**/*.json
 derivatives
+fmapless_subs
 sub-*.html
 *.asv
 
