@@ -23,6 +23,12 @@
 %     10785 10794 10800 10801 10802 10803 10804 10806 ...
 %     10807 10809 10812];
 
+sub_list_dir = "/ZPOOL/data/projects/rf1-sra-sharedreward/code"
+sub_list_file = "sub_all.txt"
+
+sub_list = readtable(fullfile(sub_list_dir, sub_list_file));
+sub_list = table2array(sub_list);
+
 for i = 1:length(sub_list)
     i
     convertSharedReward2BIDSevents(sub_list(i))
