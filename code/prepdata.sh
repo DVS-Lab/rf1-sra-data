@@ -41,7 +41,7 @@ rm -rf $dsroot/bids/sub-${sub}
 singularity run --cleanenv \
 -B $dsroot:/out \
 -B $sourcedata:/sourcedata \
-/ZPOOL/data/tools/heudiconv-0.13.1.sif \
+/ZPOOL/data/tools/heudiconv_1.1.0.sif \
 -d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 -o /out/bids/ \
 -f /out/code/heuristics.py \
