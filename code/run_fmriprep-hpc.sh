@@ -5,7 +5,7 @@ maindir=~/work/rf1-sra-data #this should be the only line that has to change if 
 scriptdir=$maindir/code
 
 
-mapfile -t myArray < ${scriptdir}/sublist_new.txt
+mapfile -t myArray < ${scriptdir}/sublist_all.txt
 
 
 # grab the first 10 elements
