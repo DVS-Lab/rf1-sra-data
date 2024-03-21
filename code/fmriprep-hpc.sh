@@ -56,10 +56,9 @@ for sub in ${subjects[@]}; do
 		--me-output-echos \
 		--ignore fieldmaps \
 		--use-syn-sdc \
-		--cifti-output 91k \
-		--output-spaces fsLR fsaverage MNI152NLin6Asym \
+		--output-spaces MNI152NLin6Asym \
 		--bids-filter-file /base/code/fmriprep_config.json \
-		--fs-license-file /opts/fs_license.txt -w /scratch >> $logdir/cmd_fmriprep_${PBS_JOBID}.txt
+		--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch >> $logdir/cmd_fmriprep_${PBS_JOBID}.txt
 	else
 		echo singularity run --cleanenv \
 		-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
@@ -73,10 +72,12 @@ for sub in ${subjects[@]}; do
 		--stop-on-first-crash \
 		--nthreads 12 \
 		--me-output-echos \
-		--cifti-output 91k \
-		--output-spaces fsLR fsaverage MNI152NLin6Asym \
+		--output-spaces MNI152NLin6Asym \
 		--bids-filter-file /base/code/fmriprep_config.json \
-		--fs-license-file /opts/fs_license.txt -w /scratch >> $logdir/cmd_fmriprep_${PBS_JOBID}.txt
+		--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch >> $logdir/cmd_fmriprep_${PBS_JOBID}.txt
 	fi
 done
 torque-launch -p $logdir/chk_fmriprep_${PBS_JOBID}.txt $logdir/cmd_fmriprep_${PBS_JOBID}.txt
+
+# --cifti-output 91k \
+# --output-spaces fsLR fsaverage MNI152NLin6Asym \
