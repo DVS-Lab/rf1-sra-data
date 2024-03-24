@@ -14,8 +14,8 @@ def infotodict(seqinfo):
     # functional data
 	trust_mag = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_part-mag_bold')
     trust_phase = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_part-phase_bold')
-	trust_sbref = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_sbref')
-	sharedreward_mag = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_run-{item:d}_part-mag_bold')
+    trust_sbref = create_key('sub-{subject}/func/sub-{subject}_task-trust_run-{item:d}_sbref')
+    sharedreward_mag = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_run-{item:d}_part-mag_bold')
     sharedreward_phase = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_run-{item:d}_part-phase_bold')
 	sharedreward_sbref = create_key('sub-{subject}/func/sub-{subject}_task-sharedreward_run-{item:d}_sbref')
 	srSocial_mag = create_key('sub-{subject}/func/sub-{subject}_task-socialdoors_run-{item:d}_part-mag_bold')
