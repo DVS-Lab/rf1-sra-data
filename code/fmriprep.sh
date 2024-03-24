@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # example code for FMRIPREP
 # runs FMRIPREP on input subject
 # usage: bash run_fmriprep.sh sub
@@ -32,29 +34,27 @@ if [ $sub -eq 10317 ] || [ $sub -eq 10369 ] || [ $sub -eq 10402 ] || [ $sub -eq 
 	-B $maindir:/base \
 	-B /ZPOOL/data/tools/licenses:/opts \
 	-B $scratchdir:/scratch \
-	/ZPOOL/data/tools/fmriprep-23.1.3.simg \
+	/ZPOOL/data/tools/fmriprep-23.2.1.simg \
 	/base/bids /base/derivatives/fmriprep \
 	participant --participant_label $sub \
 	--stop-on-first-crash \
 	--me-output-echos \
 	--use-syn-sdc \
-	--cifti-output 91k \
-	--output-spaces fsLR fsaverage MNI152NLin6Asym \
-	--fs-license-file /opts/fs_license.txt -w /scratch
+	--output-spaces MNI152NLin6Asym \
+	--bids-filter-file /base/code/fmriprep_config.json \
+	--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
 else
 	singularity run --cleanenv \
 	-B ${TEMPLATEFLOW_DIR}:/opt/templateflow \
 	-B $maindir:/base \
 	-B /ZPOOL/data/tools/licenses:/opts \
 	-B $scratchdir:/scratch \
-	/ZPOOL/data/tools/fmriprep-23.1.3.simg \
+	/ZPOOL/data/tools/fmriprep-23.2.1.simg \
 	/base/bids /base/derivatives/fmriprep \
 	participant --participant_label $sub \
 	--stop-on-first-crash \
 	--me-output-echos \
-	--cifti-output 91k \
-	--output-spaces fsLR fsaverage MNI152NLin6Asym \
-	--fs-license-file /opts/fs_license.txt -w /scratch
+	--output-spaces MNI152NLin6Asym \
+	--bids-filter-file /base/code/fmriprep_config.json \
+	--fs-no-reconall --fs-license-file /opts/fs_license.txt -w /scratch
 fi
-
-#to add melodic, use #--aroma-melodic-dimensionality -100 \
