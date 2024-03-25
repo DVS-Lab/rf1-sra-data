@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/03/20) - Preprocessed all subject data with fmriprep version 23.2.1 and Heudiconv version 1.1.0
+
 (2024/02/07) - REDCap - Avi manually copied 10716's data from the RF1 project to the Island screener
 
 (2024/02/06) - REDCap - Re-ordered the Island screener so the longest surveys are at the end. Old order: audit, dudit, usi, fevs, promis, pmas, pam, mpss, ses, fraud, dospert, faq, ecog, bbgs, uclal
