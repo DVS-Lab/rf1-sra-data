@@ -5,7 +5,7 @@ scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 #for sub in `cat ${scriptdir}/sublist_all.txt` ; do
 #for sub in 10875 10887 10940; do
-for sub in 10849; do
+for sub in 10317; do
 #for sub in ; do
 
 	script=${scriptdir}/prepdata.sh
