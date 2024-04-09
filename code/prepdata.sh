@@ -38,7 +38,7 @@ rm -rf $dsroot/bids/sub-${sub}
 
 
 # PART 1: running heudiconv and fixing fieldmaps
-singularity run --cleanenv \
+/ZPOOL/data/tools/apptainer/bin/singularity run --cleanenv \
 -B $dsroot:/out \
 -B $sourcedata:/sourcedata \
 /ZPOOL/data/tools/heudiconv_1.1.0.sif \
