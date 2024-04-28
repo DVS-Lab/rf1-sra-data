@@ -6,27 +6,37 @@
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 basedir="$(dirname "$scriptdir")"
 
-
-#bids_directory="/ZPOOL/data/projects/rf1-datapaper-dev/bids"
 fmriprep_dir=/ZPOOL/data/projects/rf1-sra-data/derivatives/fmriprep
+bids_dir=/ZPOOL/data/projects/rf1-datapaper-dev/bids
 destination_server="@owlsnest.hpc.temple.edu"
-#destination_path=":work/rf1-sra-data/bids"
 
 read -p "Enter AccessNet ID: " destination_user
 	
-for sub in `cat ${scriptdir}/sublist_new-flip.txt` ; do
+for sub in $(cat "${scriptdir}/sublist_new-flip.txt"); do
 
-	source_file="$fmriprep_dir/sub-$sub"
-	
-	# Transfer Preproc BOLD files
-	rsync -avh --no-compress --progress --include='*/' --include='*MNI152NLin6Asym_desc-preproc_bold.nii.gz' --exclude='*' "${source_file}" "${destination_user}${destination_server}:work/rf1-sra-data/derivatives/fmriprep/sub-${sub}/"
-	sleep 5
+	source_fmriprep="$fmriprep_dir/sub-$sub"
+	source_bids="$bids_dir/sub-$sub/func"
 
-	# Transfer Confound files
-	#rsync -avh --no-compress --progress --include='*/' --include='*_confounds_timeseries.tsv' --exclude='*' "${source_file}" "${destination_user}${destination_server}:work/rf1-sra-data/derivatives/fmriprep/sub-${sub}/"
+#	# Transfer Preproc BOLD files, Confound files, and events.tsv files
+#	rsync -avh --no-compress --progress \
+#		--ignore-existing \
+#		--recursive \
+#		--include='*/' \
+#		--include='*MNI152NLin6Asym_desc-preproc_bold.nii.gz' \
+#		--include='*-confounds_timeseries.tsv' \
+#		--include='*_events.tsv' \
+#		--exclude='*' \
+#		"${source_fmriprep}" "${destination_user}${destination_server}:work/rf1-sra-data/derivatives/fmriprep/sub-${sub}/"
 
 	# Transfer events.tsv files
-	#rsync -avh --no-compress --progress --include='*/' --include='*_events.tsv' --exclude='*' "${bids_directory}/sub-${sub}/" "${destination_user}${destination_server}${destination_path}/sub-${sub}"
+	rsync -avh --no-compress --progress \
+		--ignore-existing \
+		--recursive \
+		--include='*/' \
+		--include='*_events.tsv' \
+		--exclude='*' \
+		"${source_bids}" "${destination_user}${destination_server}:work/rf1-sra-data/bids/sub-${sub}/"
+	sleep 30
 done
 
 exit
