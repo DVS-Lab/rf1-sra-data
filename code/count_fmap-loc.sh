@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set the directory path
-directory="/ZPOOL/data/sourcedata/sourcedata/rf1-sequence-pilot/"
+directory="/ZPOOL/data/sourcedata/sourcedata/rf1-sra/"
 
 # Iterate through subjects, find the number of directories, and sort by count
 for subject_dir in "${directory}"*/*; do

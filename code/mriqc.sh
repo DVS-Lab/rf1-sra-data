@@ -2,18 +2,10 @@
 
 sub=$1
 
-except_subs=(1001 3003)
-for i in "${except_subs[@]}" ; do
-    if [ "$i" -eq "$sub" ] ; then
-        echo "Exception ${sub}"
-	      exit 1
-    fi
-done
-
 
 # ensure paths are correct irrespective from where user runs the script
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-dsroot="$(dirname "$scriptdir")"
+dsroot="$(dirname "$codedir")"
 
 
 ## Run MRIQC on subject
@@ -21,7 +13,7 @@ dsroot="$(dirname "$scriptdir")"
 
 ## make derivatives folder if it doesn't exist.
 ## let's keep this out of bids for now
-echo "running MRIQC for subject $sub remember to clear your scratch"
+
 if [ ! -d $dsroot/derivatives/mriqc ]; then
 	mkdir -p $dsroot/derivatives/mriqc
 fi
@@ -43,8 +35,7 @@ singularity run --cleanenv \
 -B $dsroot/bids:/data \
 -B $dsroot/derivatives/mriqc:/out \
 -B $scratch:/scratch \
-/ZPOOL/data/tools/mriqc-23.1.0.simg \
+/ZPOOL/data/tools/mriqc-24.0.0.simg \
 /data /out \
-participant --participant_label $sub \
--m T1w T2w bold \
+#participant --participant_label $sub \
 -w /scratch

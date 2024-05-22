@@ -14,16 +14,16 @@
 
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 maindir="$(dirname "$scriptdir")"
-baseout=/ZPOOL/data/projects/rf1-sra-socdoors/derivatives/fsl/EVFiles
+baseout=/ZPOOL/data/projects/rf1-sra-trust/derivatives/fsl/EVFiles
 if [ ! -d ${baseout} ]; then
   mkdir -p $baseout
 fi
 
 sub=$1
 
-for task in doors socialdoors; do
-	for run in 1; do
-  			input=/ZPOOL/data/projects/rf1-sra/stimuli/Scan-Social_Doors/data/${sub}/sub-${sub}_task-${task}_run-${run}_events.tsv
+for task in trust; do
+	for run in 0 1; do
+  			input=/ZPOOL/data/projects/rf1-sra/stimuli/Scan-Investment_Game/logs/${sub}/sub-${sub}_task-${task}_run-${run}_raw.csv
   			output=${baseout}/sub-${sub}/${task}
 			mkdir -p $output
   			if [ -e $input ]; then
