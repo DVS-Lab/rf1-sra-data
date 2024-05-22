@@ -107,7 +107,7 @@ for file in metric_files:
         Comp_confounds=pd.concat([ICA_mixing, PCA_mixing], axis=1)
         confounds_df=pd.concat([fmriprep_confounds, Comp_confounds], axis=1)
         #Output in fsl-friendly format
-        outfname='../derivatives/fsl/confounds/%s/%s_task-sharedreward_acq-%s_desc-TedanaPlusConfounds.tsv'%(sub,sub,acq)
+        outfname='../derivatives/fsl/confounds_tedana/%s/%s_task-sharedreward_acq-%s_desc-TedanaPlusConfounds.tsv'%(sub,sub,acq)
         confounds_df.to_csv(outfname,index=False,header=False,sep='\t')
     else:
         print("fmriprep failed for %s %s"%(sub,acq))

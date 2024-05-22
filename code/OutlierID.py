@@ -15,7 +15,7 @@ import argparse
 from scipy.stats import zscore
 
 
-bids_dir = "/data/projects/istart-data/bids" # edit if necessary
+bids_dir = "/ZPOOL/data/projects/rf1-sra-data/bids" # edit if necessary
 
 # check arg (input path)
 parser = argparse.ArgumentParser(description="Give me a path to your mriqc output")
@@ -29,7 +29,7 @@ mriqc_path = args.mriqcDir
 
 # Restrict subs to just those usable for your task
 # Load in newsubs.txt
-all_subs=np.loadtxt('newsubs_mid.txt')
+all_subs=np.loadtxt('sublist-all.txt')
 all_subs=['sub-'+str(int(x)) for x in all_subs]
 
 
@@ -95,10 +95,10 @@ for task in df_full.task.unique():
     df_cov=df_cov.groupby(by='Sub').mean().reset_index().rename(columns={'index':'Sub'})
     df_cov=df_cov[['Sub']+keys]
     df_cov[['tsnr','fd_mean']]=df_cov[['tsnr','fd_mean']].apply(zscore)
-    df_cov.to_csv('../derivatives/Task-%s_Level-Group_Covariates_mriqc-0.16.1_JUN1523.tsv'%(task),sep='\t',index=False)
+    df_cov.to_csv('../derivatives/Task-%s_Level-Group_Covariates_mriqc-0.16.1.tsv'%(task),sep='\t',index=False)
 
     df_out=df[df.Sub.isin(BS)]
     df_out=df_out.Sub.value_counts().reset_index().rename(columns={'index':'Sub_num'})
     df_out=df_out.sort_values(by='Sub_num')
-    df_out.to_csv('../derivatives/Task-%s_CustomSubOutlier_mriqc-0.16.1_JUN1523.tsv'%(task),sep='\t',index=False)
+    df_out.to_csv('../derivatives/Task-%s_CustomSubOutlier_mriqc-0.16.1.tsv'%(task),sep='\t',index=False)
     print("df_out")
