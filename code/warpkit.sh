@@ -14,7 +14,7 @@ if [ ! -d $outdir ]; then
 	mkdir -p $outdir
 fi
 
-indir=${maindir}/fmap_test/sub-${sub}/func
+indir=${maindir}/bids/sub-${sub}/func
 
 if [ ! -e $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.json ]; then
 	echo "NO DATA: sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.json"
@@ -23,7 +23,7 @@ if [ ! -e $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.json ];
 fi
 
 # don't re-do existing output
-if [ -e $maindir/fmap_test/sub-${sub}/fmap/sub-${sub}_run-${run}_fieldmap.json ]; then
+if [ -e $maindir/bids/sub-${sub}/fmap/sub-${sub}_run-${run}_fieldmap.json ]; then
 	echo "EXISTS (skipping): sub-${sub}/fmap/sub-${sub}_run-${run}_fieldmap.json"
 	exit
 fi
@@ -49,12 +49,12 @@ singularity run --cleanenv \
 
 
 # extract first volume as fieldmap and copy to fmap dir. still need json files for these. 
-fslroi $outdir/sub-${sub}_task-${task}_run-${run}_fieldmaps.nii $maindir/fmap_test/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap 0 1
-fslroi $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.nii.gz $maindir/fmap_test/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_magnitude 0 1
+fslroi $outdir/sub-${sub}_task-${task}_run-${run}_fieldmaps.nii $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap 0 1
+fslroi $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.nii.gz $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_magnitude 0 1
 
 # placeholders for json files. will need editing.
-cp $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.json $maindir/fmap_test/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_magnitude.json
-cp $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-phase_bold.json $maindir/fmap_test/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap.json
+cp $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.json $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_magnitude.json
+cp $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-phase_bold.json $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap.json
 
 # trash the rest
 rm -rf $outdir/sub-${sub}_task-${task}_run-${run}_displacementmaps.nii

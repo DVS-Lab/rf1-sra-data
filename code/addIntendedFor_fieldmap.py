@@ -2,7 +2,7 @@ import json
 import os
 
 # Define paths
-bidsdir = "/ZPOOL/data/projects/rf1-sra-data/fmap_test/"
+bidsdir = "/ZPOOL/data/projects/rf1-sra-data/bids/"
 func_dir = "func"  # Directory containing the functional images
 
 # Find all subject directories in the BIDS directory
