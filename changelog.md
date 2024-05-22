@@ -1,5 +1,9 @@
 # Changelog
 
+(2024/05/21) - Deleted the appt1 and appt2 scoring reports since the info all lives in the full scoring report
+
+(2024/05/21) - Added baseline phys variavbles to scoring repoort
+
 (2024/03/20) - Preprocessed all subject data with fmriprep version 23.2.1 and Heudiconv version 1.1.0
 
 (2024/02/07) - REDCap - Avi manually copied 10716's data from the RF1 project to the Island screener
