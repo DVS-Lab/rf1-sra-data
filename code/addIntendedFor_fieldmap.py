@@ -12,7 +12,7 @@ for subj in subs:
     print("Running subject:", subj)
 
     fmap_dir = os.path.join(bidsdir, subj, 'fmap')
-    json_files = [f for f in os.listdir(fmap_dir) if f.endswith('.json')]
+    json_files = [f for f in os.listdir(fmap_dir) if f.endswith('fieldmap.json') or f.endswith('magnitude.json')]
 
     for json_file in json_files:
         json_path = os.path.join(fmap_dir, json_file)
