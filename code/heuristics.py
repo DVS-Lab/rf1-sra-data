@@ -50,10 +50,10 @@ def infotodict(seqinfo):
 	for s in seqinfo:
 	     if ('T1w-anat_mpg_07sag_iso' in s.protocol_name) and ('NORM' in s.image_type):
 	         info[t1w] = [s.series_id]
-	     if ('gre_field' in s.protocol_name) and ('NORM' in s.image_type):
-	         info[mag] = [s.series_id]
-	     if ('gre_field' in s.protocol_name) and ('P' in s.image_type):
-	         info[phase] = [s.series_id]
+	     #if ('gre_field' in s.protocol_name) and ('NORM' in s.image_type):
+	     #    info[mag] = [s.series_id]
+	     #if ('gre_field' in s.protocol_name) and ('P' in s.image_type):
+	     #    info[phase] = [s.series_id]
 	     if ('t2_tse_dark-fluid_tra_p3' in s.protocol_name) and (s.dim3 == 47):
 	     		info[t2_flair] = [s.series_id]
 	 
