@@ -8,8 +8,7 @@ rm -rf $scriptdir/missingFiles-warpkit.log
 touch $scriptdir/missingFiles-warpkit.log
 
 
-#for sub in `cat $scriptdir/sublist-rf1.txt`; do
-for sub in 10317; do	
+for sub in `cat $scriptdir/sublist-rf1.txt`; do
 	for task in doors socialdoors trust ugr sharedreward ; do
 		for run in 1 2 ; do
 			script=${scriptdir}/warpkit.sh
