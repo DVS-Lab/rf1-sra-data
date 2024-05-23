@@ -26,7 +26,8 @@ for subj in subs:
             run = file_parts[2].split('-')[1]
 
             for echo in range(1, 5):
-                intended_for.append(f"{func_dir}/{subj}_task-{task}_run-{run}_echo-{echo}_bold.nii.gz")
+                intended_for.append(f"{func_dir}/{subj}_task-{task}_run-{run}_echo-{echo}_part-mag_bold.nii.gz")
+
 
             data["IntendedFor"] = intended_for
             data["Units"] = "Hz"
