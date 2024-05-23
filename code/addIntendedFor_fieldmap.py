@@ -29,6 +29,9 @@ for subj in subs:
                 intended_for.append(f"{func_dir}/{subj}_task-{task}_run-{run}_echo-{echo}_bold.nii.gz")
 
             data["IntendedFor"] = intended_for
+            data["Units"] = "Hz"
+            data.pop("EchoTime1", None)
+            data.pop("EchoTime2", None)
 
         with open(json_path, 'w') as f:
             json.dump(data, f, indent=4, sort_keys=True)
