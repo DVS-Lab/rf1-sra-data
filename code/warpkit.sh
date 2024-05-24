@@ -23,8 +23,8 @@ if [ ! -e $indir/sub-${sub}_task-${task}_run-${run}_echo-1_part-mag_bold.json ];
 fi
 
 # don't re-do existing output
-if [ -e $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap.json ]; then
-	echo "EXISTS (skipping): sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap.json"
+if [ -e $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap.nii.gz ]; then
+	echo "EXISTS (skipping): sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap.nii.gz"
 	exit
 fi
 
