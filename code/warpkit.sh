@@ -28,6 +28,10 @@ if [ -e $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-${task}_run-${run}_fieldmap
 	exit
 fi
 
+# delete default gre fmaps (phasediff)
+if [ -e $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-bold_phasediff.nii.gz ]; then
+	rm -rf $maindir/bids/sub-${sub}/fmap/sub-${sub}_acq-bold*
+fi
 
 singularity run --cleanenv \
 -B $indir:/base \
