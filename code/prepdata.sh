@@ -44,7 +44,7 @@ rm -rf $dsroot/bids/sub-${sub}
 /ZPOOL/data/tools/heudiconv_1.1.0.sif \
 -d /sourcedata/Smith-SRA-{subject}/*/scans/*/*/DICOM/files/*.dcm \
 -o /out/bids/ \
--f /out/code/heuristics.py \
+-f /out/code/heuristics_rf1.py \
 -s $sub \
 -c dcm2niix \
 -b --minmeta --overwrite
