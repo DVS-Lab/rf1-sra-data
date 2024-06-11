@@ -10,7 +10,7 @@ task=$2
 run=$3
 
 indir=$maindir/derivatives/fmriprep/sub-${sub}
-outdir=$maindir/derivatives/fmriprep-fake/sub-${sub}/func
+outdir=$maindir/derivatives/fmriprep-fake_echo-2/sub-${sub}/func
 if [ ! -d $outdir ]; then
 	mkdir -p $outdir
 fi
