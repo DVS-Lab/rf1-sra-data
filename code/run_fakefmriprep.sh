@@ -4,7 +4,7 @@
 scriptdir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 
-for sub in `cat /ZPOOL/data/projects/istart-eyeballs/code/sublist_rf1.txt`; do
+for sub in `cat ~/istart-eyeballs/code/sublist_rf1.txt`; do
 	for task in doors socialdoors trust ugr sharedreward ; do
 		for run in 1 2 ; do
 			script=${scriptdir}/fakefmriprep.sh
