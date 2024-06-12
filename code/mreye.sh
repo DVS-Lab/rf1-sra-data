@@ -8,8 +8,8 @@ maindir="$(dirname "$scriptdir")"
 
 # make derivatives folder if it doesn't exist.
 # let's keep this out of bids for now
-if [ ! -d $maindir/derivatives/mreye ]; then
-	mkdir -p $maindir/derivatives/mreye
+if [ ! -d $maindir/derivatives/mreye_echo-2 ]; then
+	mkdir -p $maindir/derivatives/mreye_echo-2
 fi
 
 
@@ -19,7 +19,7 @@ singularity run --cleanenv \
 /ZPOOL/data/tools/bidsmreye-0.3.1.sif \
 --action all \
 /base/derivatives/fmriprep-fake_echo-2 \
-/base/derivatives/mreye \
+/base/derivatives/mreye_echo-2 \
 participant \
 --space MNI152NLin6Asym
 
@@ -28,6 +28,6 @@ participant \
 #-B $maindir:/base \
 #/ZPOOL/data/tools/bidsmreye-0.3.1.sif \
 #--action qc \
-#/base/derivatives/fmriprep-fake \
-#/base/derivatives/mreye \
+#/base/derivatives/fmriprep-fake_echo-2 \
+#/base/derivatives/mreye_echo-2 \
 #group

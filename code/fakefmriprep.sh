@@ -15,8 +15,13 @@ if [ ! -d $outdir ]; then
 	mkdir -p $outdir
 fi
 
-
+if [ -e ${outdir}/sub-${sub}_task-${task}_run-${run}_space-MNI152NLin6Asym_desc-preproc_bold.nii.gz ]; then
+	echo "skipping because output exists: sub-${sub}_task-${task}_run-${run}"
+	exit
+fi
 if [ -e ${indir}/func/sub-${sub}_task-${task}_run-${run}_echo-2_part-mag_desc-preproc_bold.nii.gz ]; then
+
+	echo "missing sub-${sub}_task-${task}_run-${run}" >> $scriptdir/missing-fakefmriprep.log
 
 	# split into 3d vols
 	fslsplit ${indir}/func/sub-${sub}_task-${task}_run-${run}_echo-2_part-mag_desc-preproc_bold.nii.gz \

@@ -8,7 +8,7 @@ for sub in `cat ~/istart-eyeballs/code/sublist_rf1.txt`; do
 	for task in doors socialdoors trust ugr sharedreward ; do
 		for run in 1 2 ; do
 			script=${scriptdir}/fakefmriprep.sh
-			NCORES=15
+			NCORES=35
 			while [ $(ps -ef | grep -v grep | grep $script | wc -l) -ge $NCORES ]; do
 				sleep 5s
 			done
