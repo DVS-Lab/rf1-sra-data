@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/06/20) - Changed lotto_id field in island screener 
+
 (2024/05/25) - Started full in person protocol for the MCI participants in Tania's lab. $100 for first visit (island screener + shortened mock scan + calling their friend), $100 for the scan visit (shortened scan), $50 bonus. 
 
 (2024/05/21) - Deleted the appt1 and appt2 scoring reports since the info all lives in the full scoring report
