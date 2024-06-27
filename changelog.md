@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/06/27) - MCI participants will not be doing AUDIT, DUDIT, DOSPERT or AQ. Added a question to Island Screener that asks: "are you doing this survey online or on Temple University's campus with a researcher?" if they say with researcher then it'll cut them. That data will also pipe to RF1 subject info and cut AQ from MSQ
+
 (2024/06/20) - Changed lotto_id field in island screener 
 
 (2024/05/25) - Started full in person protocol for the MCI participants in Tania's lab. $100 for first visit (island screener + shortened mock scan + calling their friend), $100 for the scan visit (shortened scan), $50 bonus. 
