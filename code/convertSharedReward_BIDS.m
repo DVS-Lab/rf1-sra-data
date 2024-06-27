@@ -2,10 +2,10 @@
 [pathstr,name,ext] = fileparts(pwd);
 usedir = pathstr;
 codedir = pwd;
-maindir = fullfile(usedir,'bids','sourcedata','Scan-Lets_Make_A_Deal')
-logdir = fullfile(usedir,'bids','sourcedata','Scan-Card_Guessing_Game','logs')
+maindir = '/ZPOOL/data/projects/rf1-sra-data'
+logdir = '/ZPOOL/data/projects/rf1-sra/stimuli/Scan-Card_Guessing_Game/logs'
 
-subs = load('sublist-rf1.txt');
+subs = load('sublist_all.txt');
 
 % make default output
 out.ntrials(1) = 0;
@@ -14,7 +14,7 @@ out.nmisses(1) = 0;
 out.nmisses(2) = 0;
 out.nfiles = 0;
 
-sublist = fullfile(codedir,'sublist-rf1.txt');
+sublist = fullfile(codedir,'sublist_all.txt');
 
 subjects = table2array(readtable(sublist));
 
@@ -65,6 +65,7 @@ for ii = 1:length(subjects)
     decision = T.decision_onset
     Partner = T.Partner;
     feedback = T.Feedback;
+    resp = T.resp;
     
     out.ntrials(r+1) = height(T);
     out.nmisses(r+1) = sum(T.resp < 1);
@@ -108,7 +109,7 @@ for ii = 1:length(subjects)
         end
        
 
-        if RT(t) == 999 %missed response
+        if resp(t) == 0.0 %missed response
             fprintf(fid,'%f\t%f\t%s\t%s\n',onset(t),duration(t),'missed_trial','n/a');
         else
             fprintf(fid,'%f\t%f\t%s\t%f\n',onset(t),duration(t),['event_' trial_type],RT(t));
