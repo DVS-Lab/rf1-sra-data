@@ -28,7 +28,7 @@ for sub in ${subjects[@]}; do
 			echo3=${prepdir}/sub-${sub}_task-${task}_run-${run}_echo-3_part-mag_desc-preproc_bold.nii.gz
 			echo4=${prepdir}/sub-${sub}_task-${task}_run-${run}_echo-4_part-mag_desc-preproc_bold.nii.gz
 			outdir=${maindir}/derivatives/tedana/sub-${sub}
-			
+
 			# Check for the presence of all echo files
 			if [ ! -e $echo1 ] || [ ! -e $echo2 ] || [ ! -e $echo3 ] || [ ! -e $echo4 ]; then
 				echo "Missing one or more files for sub-${sub}, task-${task}, run-${run}" >> $scriptdir/missing-tedanaInput.log
@@ -38,7 +38,7 @@ for sub in ${subjects[@]}; do
 
 			mkdir -p $outdir
 
-			# run tedana
+			# run tedana and log the command
 			echo "Running tedana -d $echo1 $echo2 $echo3 $echo4 \
 			-e 0.0138 0.03154 0.04928 0.06702 \
 			--out-dir $outdir \
@@ -46,6 +46,15 @@ for sub in ${subjects[@]}; do
 			--convention bids \
 			--fittype curvefit \
 			--overwrite" >> $logdir/cmd_tedana_${PBS_JOBID}.txt
+
+			# Execute the tedana command and redirect stdout and stderr to the log file
+			tedana -d $echo1 $echo2 $echo3 $echo4 \
+			-e 0.0138 0.03154 0.04928 0.06702 \
+			--out-dir $outdir \
+			--prefix sub-${sub}_task-${task}_run-${run} \
+			--convention bids \
+			--fittype curvefit \
+			--overwrite >> $logdir/cmd_tedana_${PBS_JOBID}.txt 2>&1
 
 			# clean up and save space
 			rm -rf ${outdir}/sub-${sub}_task-${task}_run-${run}_*.nii.gz
