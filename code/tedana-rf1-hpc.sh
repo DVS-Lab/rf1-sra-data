@@ -13,9 +13,12 @@ scriptdir=$maindir/code
 logdir=$maindir/logs
 mkdir -p $logdir
 
+rm -f $logdir/cmd_tedana_${PBS_JOBID}.txt
+touch $logdir/cmd_tedana_${PBS_JOBID}.txt
+
 for sub in ${subjects[@]}; do
 	for task in "sharedreward" "trust" "ugr" "doors" "socialdoors"; do
-		for run in 0 1; do
+		for run in 1 2; do
 		
 			# prepare inputs and outputs; don't run if data is missing, but log missingness
 			prepdir=${maindir}/derivatives/fmriprep/sub-${sub}/func
@@ -38,7 +41,7 @@ for sub in ${subjects[@]}; do
 			--prefix sub-${sub}_task-${task}_run-${run} \
 			--convention bids \
 			--fittype curvefit \
-			--overwrite
+			--overwrite >> $logdir/cmd_fmriprep_${PBS_JOBID}.txt
 			
 			# clean up and save space
 			rm -rf ${outdir}/sub-${sub}_task-${task}_run-${run}_*.nii.gz
@@ -46,3 +49,5 @@ for sub in ${subjects[@]}; do
 		done
 	done
 done
+
+torque-launch -p $logdir/chk_tedana_${PBS_JOBID}.txt $logdir/cmd_tedana_${PBS_JOBID}.txt
