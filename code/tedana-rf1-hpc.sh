@@ -11,6 +11,7 @@ cd $PBS_O_WORKDIR
 maindir=/home/tun31934/work/rf1-sra-data
 scriptdir=$maindir/code
 logdir=$maindir/logs
+prepdir=$maindir/derivatives/fmriprep
 mkdir -p $logdir
 
 rm -f $logdir/cmd_tedana_${PBS_JOBID}.txt
@@ -35,13 +36,13 @@ for sub in ${subjects[@]}; do
 			mkdir -p $outdir
 			
 			# run tedana
-			tedana -d $echo1 $echo2 $echo3 $echo4 \
+			echo tedana -d $echo1 $echo2 $echo3 $echo4 \
 			-e 0.0138 0.03154 0.04928 0.06702 \
 			--out-dir $outdir \
 			--prefix sub-${sub}_task-${task}_run-${run} \
 			--convention bids \
 			--fittype curvefit \
-			--overwrite >> $logdir/cmd_fmriprep_${PBS_JOBID}.txt
+			--overwrite >> $logdir/cmd_tedana_${PBS_JOBID}.txt
 			
 			# clean up and save space
 			rm -rf ${outdir}/sub-${sub}_task-${task}_run-${run}_*.nii.gz
