@@ -39,22 +39,13 @@ for sub in ${subjects[@]}; do
 			mkdir -p $outdir
 
 			# run tedana and log the command
-			echo "Running tedana -d $echo1 $echo2 $echo3 $echo4 \
+			echo "tedana -d $echo1 $echo2 $echo3 $echo4 \
 			-e 0.0138 0.03154 0.04928 0.06702 \
 			--out-dir $outdir \
 			--prefix sub-${sub}_task-${task}_run-${run} \
 			--convention bids \
 			--fittype curvefit \
 			--overwrite" >> $logdir/cmd_tedana_${PBS_JOBID}.txt
-
-			# Execute the tedana command and redirect stdout and stderr to the log file
-			tedana -d $echo1 $echo2 $echo3 $echo4 \
-			-e 0.0138 0.03154 0.04928 0.06702 \
-			--out-dir $outdir \
-			--prefix sub-${sub}_task-${task}_run-${run} \
-			--convention bids \
-			--fittype curvefit \
-			--overwrite >> $logdir/cmd_tedana_${PBS_JOBID}.txt 2>&1
 
 			# clean up and save space
 			rm -rf ${outdir}/sub-${sub}_task-${task}_run-${run}_*.nii.gz
