@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/09/04) - Changed recruitment protocol to be able to handle participants who said they did not have a friend from the island screener. We will now ask them for their friend info on the screener
+
 (2024/06/27) - MCI participants will not be doing AUDIT, DUDIT, DOSPERT or AQ. Added a question to Island Screener that asks: "are you doing this survey online or on Temple University's campus with a researcher?" if they say with researcher then it'll cut them. That data will also pipe to RF1 subject info and cut AQ from MSQ
 
 (2024/06/20) - Changed lotto_id field in island screener 
