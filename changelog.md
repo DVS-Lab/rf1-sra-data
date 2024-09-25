@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/09/24) - Purchased OpenPhone using the P card https://my.openphone.com/settings/billing 
+
 (2024/09/09) - Extended mock scan now will have breaks and snacks
 
 (2024/09/04) - Changed recruitment protocol to be able to handle participants who said they did not have a friend from the island screener. We will now ask them for their friend info on the screener
