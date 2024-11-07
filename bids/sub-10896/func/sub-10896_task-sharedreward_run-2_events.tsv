@@ -57,8 +57,7 @@ onset	duration	trial_type	response_time
 210.076900	0.734030	stranger_face	0.734030
 220.862670	5.021774	event_friend_neutral	0.732267
 220.862670	0.732267	friend_face	0.732267
-226.705920	4.215596	event_stranger_punish	2.781924
-226.705920	2.781924	stranger_face	2.781924
+226.705920	4.215596	missed_trial	n/a
 235.080490	4.214681	event_friend_reward	0.730577
 235.080490	0.730577	friend_face	0.730577
 244.961300	5.022628	event_stranger_punish	0.832732
@@ -105,5 +104,4 @@ onset	duration	trial_type	response_time
 388.525400	1.151682	friend_face	1.151682
 393.559020	4.214824	event_stranger_reward	0.835464
 393.559020	0.835464	stranger_face	0.835464
-398.593900	4.212433	event_stranger_punish	2.782845
-398.593900	2.782845	stranger_face	2.782845
+398.593900	4.212433	missed_trial	n/a

@@ -41,8 +41,7 @@ onset	duration	trial_type	response_time
 148.778430	0.374449	computer_non-faceclea	0.374449
 156.261640	4.241463	event_computer_punish	0.607885
 156.261640	0.607885	computer_non-faceclea	0.607885
-161.328670	4.241288	event_computer_punish	2.807602
-161.328670	2.807602	computer_non-faceclea	2.807602
+161.328670	4.241288	missed_trial	n/a
 169.635590	4.234291	event_stranger_punish	0.617231
 169.635590	0.617231	stranger_face	0.617231
 174.699800	5.052787	event_friend_reward	0.969723

@@ -59,8 +59,7 @@ onset	duration	trial_type	response_time
 210.356520	0.829975	stranger_face	0.829975
 216.199080	4.214558	event_friend_reward	0.837437
 216.199080	0.837437	friend_face	0.837437
-221.225970	5.023254	event_computer_reward	2.777347
-221.225970	2.777347	computer_non-faceclea	2.777347
+221.225970	5.023254	missed_trial	n/a
 230.290680	4.214529	event_computer_punish	0.729028
 230.290680	0.729028	computer_non-faceclea	0.729028
 235.325800	5.829095	event_stranger_reward	0.527592
@@ -73,8 +72,7 @@ onset	duration	trial_type	response_time
 254.448500	0.521072	friend_face	0.521072
 265.935030	4.213936	event_computer_punish	0.534696
 265.935030	0.534696	computer_non-faceclea	0.534696
-270.970430	4.214823	event_stranger_reward	2.773917
-270.970430	2.773917	stranger_face	2.773917
+270.970430	4.214823	missed_trial	n/a
 276.004200	5.022837	event_friend_reward	0.632040
 276.004200	0.632040	friend_face	0.632040
 281.844500	5.027873	event_friend_punish	0.625052
@@ -89,8 +87,7 @@ onset	duration	trial_type	response_time
 314.090180	1.046224	computer_non-faceclea	1.046224
 320.745030	5.829301	event_friend_neutral	1.041161
 320.745030	1.041161	friend_face	1.041161
-327.395500	4.213812	event_stranger_neutral	2.775438
-327.395500	2.775438	stranger_face	2.775438
+327.395500	4.213812	missed_trial	n/a
 335.658570	5.022771	event_friend_reward	0.427848
 335.658570	0.427848	friend_face	0.427848
 343.117220	5.829798	event_stranger_punish	0.635652

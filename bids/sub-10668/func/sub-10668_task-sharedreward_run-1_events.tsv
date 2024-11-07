@@ -97,8 +97,7 @@ onset	duration	trial_type	response_time
 351.986100	2.275221	friend_face	2.275221
 362.671050	5.021697	event_friend_neutral	0.523337
 362.671050	0.523337	friend_face	0.523337
-368.510800	5.021332	event_friend_neutral	2.774515
-368.510800	2.774515	friend_face	2.774515
+368.510800	5.021332	missed_trial	n/a
 379.195900	5.021380	event_friend_punish	1.750354
 379.195900	1.750354	friend_face	1.750354
 385.038020	5.022902	event_stranger_reward	0.622968
@@ -111,8 +110,7 @@ onset	duration	trial_type	response_time
 4.022187	2.072618	friend_face	2.072618
 10.669035	5.829520	event_computer_reward	1.659289
 10.669035	1.659289	computer_non-faceclea	1.659289
-17.310800	5.022668	event_computer_neutral	2.778544
-17.310800	2.778544	computer_non-faceclea	2.778544
+17.310800	5.022668	missed_trial	n/a
 23.158209	5.023690	event_stranger_punish	1.036463
 23.158209	1.036463	stranger_face	1.036463
 30.617659	5.023518	event_stranger_neutral	1.143949
@@ -147,8 +145,7 @@ onset	duration	trial_type	response_time
 130.153100	1.241261	computer_non-faceclea	1.241261
 139.224980	5.022031	event_friend_punish	2.269458
 139.224980	2.269458	friend_face	2.269458
-148.298800	5.021140	event_stranger_punish	2.777891
-148.298800	2.777891	stranger_face	2.777891
+148.298800	5.021140	missed_trial	n/a
 154.140640	4.215535	event_stranger_punish	0.737045
 154.140640	0.737045	stranger_face	0.737045
 165.636570	5.023587	event_friend_reward	0.524723
@@ -169,8 +166,7 @@ onset	duration	trial_type	response_time
 213.792340	1.136354	friend_face	1.136354
 222.049550	4.214569	event_computer_punish	2.577981
 222.049550	2.577981	computer_non-faceclea	2.577981
-228.690830	5.828953	event_computer_reward	2.779759
-228.690830	2.779759	computer_non-faceclea	2.779759
+228.690830	5.828953	missed_trial	n/a
 241.798650	5.830784	event_friend_punish	2.062139
 241.798650	2.062139	friend_face	2.062139
 248.450330	5.829956	event_stranger_reward	1.344288
@@ -183,8 +179,7 @@ onset	duration	trial_type	response_time
 270.007260	1.855685	computer_non-faceclea	1.855685
 277.464900	4.213986	event_stranger_neutral	2.279344
 277.464900	2.279344	stranger_face	2.279344
-282.498020	5.829966	event_friend_reward	2.779529
-282.498020	2.779529	friend_face	2.779529
+282.498020	5.829966	missed_trial	n/a
 290.761300	5.829125	event_friend_reward	1.349862
 290.761300	1.349862	friend_face	1.349862
 299.018680	4.214389	event_computer_reward	1.960027

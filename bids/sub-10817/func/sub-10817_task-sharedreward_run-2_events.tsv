@@ -97,8 +97,7 @@ onset	duration	trial_type	response_time
 352.828670	0.633860	computer_non-faceclea	0.633860
 357.864650	5.830244	event_stranger_reward	0.731194
 357.864650	0.731194	stranger_face	0.731194
-364.515380	5.831216	event_stranger_punish	2.777231
-364.515380	2.777231	stranger_face	2.777231
+364.515380	5.831216	missed_trial	n/a
 372.782140	5.021476	event_stranger_punish	0.530408
 372.782140	0.530408	stranger_face	0.530408
 378.616120	5.830805	event_computer_reward	0.729737
