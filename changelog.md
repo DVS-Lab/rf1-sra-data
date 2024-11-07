@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/11/07) - a_screener_meds question that asks what medication they take has been unhidden. It was hidden from ISTART
+
 (2024/09/24) - Purchased OpenPhone using the P card https://my.openphone.com/settings/billing 
 
 (2024/09/09) - Extended mock scan now will have breaks and snacks
