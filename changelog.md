@@ -1,5 +1,7 @@
 # Changelog
 
+(2024/12/18) - last question of BVMT recognition has been fixed to be righ side up. The scores will now take a BVMT recognition timestamp into account when calculating sums and flip the results if the data was collected after today
+
 (2024/11/07) - a_screener_meds question that asks what medication they take has been unhidden. It was hidden from ISTART
 
 (2024/09/24) - Purchased OpenPhone using the P card https://my.openphone.com/settings/billing 
