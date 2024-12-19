@@ -2,6 +2,8 @@
 
 (2024/12/18) - last question of BVMT recognition has been fixed to be right side up. We created a new variable with the appendage _rightsideup
 
+(2024/12/17) - Upgraded fmriprep and heudiconv to 24.1.1 and 1.3.2, respectively. 
+
 (2024/11/07) - a_screener_meds question that asks what medication they take has been unhidden. It was hidden from ISTART
 
 (2024/09/24) - Purchased OpenPhone using the P card https://my.openphone.com/settings/billing 
