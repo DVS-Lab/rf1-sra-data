@@ -8,7 +8,7 @@ basedir="$(dirname "$scriptdir")"
 
 source_directory="/ZPOOL/data/projects/rf1-sra-data/bids/"
 destination_server="@owlsnest.hpc.temple.edu"
-destination_path=":work/rf1-sra-data/bids/"
+destination_path=":/gpfs/scratch/tug87422/smithlab-shared/rf1-sra-data/bids/"
 
 read -p "Enter AccessNet ID: " destination_user
 
