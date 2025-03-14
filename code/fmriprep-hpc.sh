@@ -12,7 +12,7 @@ cd $PBS_O_WORKDIR
 
 # ensure paths are correct
 projectname=rf1-sra-data #this should be the only line that has to change if the rest of the script is set up correctly
-maindir=~/work/$projectname
+maindir=/gpfs/scratch/tug87422/smithlab-shared/$projectname
 scriptdir=$maindir/code
 bidsdir=$maindir/bids
 logdir=$maindir/logs
@@ -46,11 +46,12 @@ for sub in ${subjects[@]}; do
 		-B $maindir:/base \
 		-B ~/work/tools/licenses:/opts \
 		-B $scratchdir:/scratch \
-		~/work/tools/fmriprep-23.2.1.simg \
+		~/work/tools/fmriprep-24.1.1.simg \
 		/base/bids /base/derivatives/fmriprep \
 		participant --participant_label $sub \
 		--stop-on-first-crash \
-		--nthreads 12 \
+		--skip-bids-validation \
+		--nthreads 28 \
 		--me-output-echos \
 		--output-spaces MNI152NLin6Asym \
 		--bids-filter-file /base/code/fmriprep_config.json \
