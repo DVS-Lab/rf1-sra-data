@@ -1,5 +1,9 @@
 # Changelog
 
+(2025/03/18) - Updated REDCap fmri session notes to include visual time check for protocol card parameters.
+
+(2025/03/18) - First scan after upgrade to Siemens XA30 from VE11. Protocol cards will need manual changes for each scan for the forseeable future. Will update when this is no longer the case, and protocols can be saved properly. 
+
 (2024/12/18) - last question of BVMT recognition has been fixed to be right side up. We created a new variable with the appendage _rightsideup
 
 (2024/12/17) - Upgraded fmriprep and heudiconv to 24.1.1 and 1.3.2, respectively. 
