@@ -61,41 +61,52 @@ def infotodict(seqinfo):
         if ('cmrr_mb3hydi_ipat2_64ch' in s.protocol_name) and (s.dim4 == 145):
             info[dwi] = [s.series_id]
 
+
+
+task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615_SBRef
+task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615_SBRef_Pha
+task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615
+task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615_Pha
+
         # functionals: mag, phase, and sbref
-        if (s.dim4 == 1120) and ('Trust' in s.protocol_name) and ('NORM' in s.image_type):
+        if (s.dim4 == 1120) and ('Trust' in s.series_description) and ('_Pha' not in s.series_description):
             info[trust_mag].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[trust_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 == 1120) and ('Trust' in s.protocol_name) and ('NORM' not in s.image_type):
+        if ('Trust' in s.protocol_name) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
+            info[trust_sbref].append(s.series_id)
+        if (s.dim4 == 1120) and ('Trust' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[trust_phase].append(s.series_id)
 
-        if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('NORM' in s.image_type):
+        if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('_Pha' not in s.series_description):
             info[sharedreward_mag].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[sharedreward_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('NORM' not in s.image_type):
+        if ('Shared' in s.protocol_name) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
+            info[sharedreward_sbref].append(s.series_id)
+        if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('TR1615_Pha' in s.series_description):
             info[sharedreward_phase].append(s.series_id)
 
-        if (s.dim4 == 872) and ('SocialDoors_face' in s.protocol_name) and ('NORM' in s.image_type):
+
+        if (s.dim4 == 872) and ('SocialDoors_face' in s.series_description) and ('_Pha' not in s.series_description):
             info[srSocial_mag] = [s.series_id]
-            idx = list_of_ids.index(s.series_id)
-            info[srSocial_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 == 872) and ('SocialDoors_face' in s.protocol_name) and ('NORM' not in s.image_type):
+        if ('SocialDoors_face' in s.series_description) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
+            info[srSocial_sbref].append([s.series_id])
+        if (s.dim4 == 872) and ('SocialDoors_face' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[srSocial_phase] = [s.series_id]
 
-        if (s.dim4 == 872) and ('SocialDoors_doors' in s.protocol_name) and ('NORM' in s.image_type):
+        if (s.dim4 == 872) and ('SocialDoors_doors' in s.series_description) and ('_Pha' not in s.series_description):
             info[srDoors_mag] = [s.series_id]
-            idx = list_of_ids.index(s.series_id)
-            info[srDoors_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 == 872) and ('SocialDoors_doors' in s.protocol_name) and ('NORM' not in s.image_type):
+        if ('SocialDoors_doors' in s.series_description) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
+            info[srDoors_sbref].append([s.series_id])
+        if (s.dim4 == 872) and ('SocialDoors_doors' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[srDoors_phase] = [s.series_id]
 
-        if (s.dim4 == 960) and ('UGR' in s.protocol_name) and ('NORM' in s.image_type):
+
+        if (s.dim4 == 960) and ('UGR' in s.series_description) and ('_Pha' not in s.series_description):
             info[UGR_mag].append(s.series_id)
-            idx = list_of_ids.index(s.series_id)
-            info[UGR_sbref].append(list_of_ids[idx -1])
-        if (s.dim4 == 960) and ('UGR' in s.protocol_name) and ('NORM' not in s.image_type):
+        if ('UGR' in s.series_description) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
+            info[UGR_sbref].append(s.series_id)
+        if (s.dim4 == 960) and ('UGR' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[UGR_phase].append(s.series_id)
+
+
 
     return info
 
