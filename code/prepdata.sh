@@ -24,7 +24,7 @@ done
 
 # ensure paths are correct irrespective from where user runs the script
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-dsroot="$(dirname "$scriptdir")"
+dsroot="$(dirname "$codedir")"
 
 echo ${dsroot}
 
