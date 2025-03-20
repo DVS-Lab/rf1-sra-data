@@ -13,20 +13,12 @@
 sourcedata=/ZPOOL/data/sourcedata/sourcedata/rf1-sra
 sub=$1
 
-except_subs=(1001)
-for i in "${except_subs[@]}" ; do
-    if [ "$i" -eq "$sub" ] ; then
-        echo "Exception ${sub}"
-	      exit 1
-    fi
-done
 
 
 # ensure paths are correct irrespective from where user runs the script
 codedir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 dsroot="$(dirname "$codedir")"
 
-echo ${dsroot}
 
 # make bids folder if it doesn't exist
 if [ ! -d $dsroot/bids ]; then

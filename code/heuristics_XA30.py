@@ -62,12 +62,6 @@ def infotodict(seqinfo):
             info[dwi] = [s.series_id]
 
 
-
-task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615_SBRef
-task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615_SBRef_Pha
-task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615
-task-UGR_run1_CMRR_MB3_IP2_ME4_TR1615_Pha
-
         # functionals: mag, phase, and sbref
         if (s.dim4 == 1120) and ('Trust' in s.series_description) and ('_Pha' not in s.series_description):
             info[trust_mag].append(s.series_id)
