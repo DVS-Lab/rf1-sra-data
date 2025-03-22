@@ -44,9 +44,9 @@ def infotodict(seqinfo):
     for s in seqinfo:
 
         # anatomicals and standard fmaps
-        if ('T1w-anat_mpg_07sag_iso' in s.protocol_name) and ('NORM' in s.image_type):
+        if ('T1w-anat_mpg_07sag_iso' in s.protocol_name):
             info[t1w] = [s.series_id]
-        if ('gre_field' in s.protocol_name) and ('NORM' in s.image_type):
+        if ('gre_field' in s.protocol_name):
             info[mag] = [s.series_id]
         if ('gre_field' in s.protocol_name) and ('P' in s.image_type):
             info[phase] = [s.series_id]
@@ -65,38 +65,38 @@ def infotodict(seqinfo):
         # functionals: mag, phase, and sbref
         if (s.dim4 == 1120) and ('Trust' in s.series_description) and ('_Pha' not in s.series_description):
             info[trust_mag].append(s.series_id)
-        if ('Trust' in s.protocol_name) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
-            info[trust_sbref].append(s.series_id)
+            idx = list_of_ids.index(s.series_id)
+            info[trust_sbref].append(list_of_ids[idx -2])
         if (s.dim4 == 1120) and ('Trust' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[trust_phase].append(s.series_id)
 
         if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('_Pha' not in s.series_description):
             info[sharedreward_mag].append(s.series_id)
-        if ('Shared' in s.protocol_name) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
-            info[sharedreward_sbref].append(s.series_id)
+            idx = list_of_ids.index(s.series_id)
+            info[sharedreward_sbref].append(list_of_ids[idx -2])
         if (s.dim4 == 1020) and ('Shared' in s.protocol_name) and ('TR1615_Pha' in s.series_description):
             info[sharedreward_phase].append(s.series_id)
 
 
         if (s.dim4 == 872) and ('SocialDoors_face' in s.series_description) and ('_Pha' not in s.series_description):
             info[srSocial_mag] = [s.series_id]
-        if ('SocialDoors_face' in s.series_description) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
-            info[srSocial_sbref].append([s.series_id])
+            idx = list_of_ids.index(s.series_id)
+            info[srSocial_sbref].append(list_of_ids[idx -2])
         if (s.dim4 == 872) and ('SocialDoors_face' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[srSocial_phase] = [s.series_id]
 
         if (s.dim4 == 872) and ('SocialDoors_doors' in s.series_description) and ('_Pha' not in s.series_description):
             info[srDoors_mag] = [s.series_id]
-        if ('SocialDoors_doors' in s.series_description) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
-            info[srDoors_sbref].append([s.series_id])
+            idx = list_of_ids.index(s.series_id)
+            info[srDoors_sbref].append(list_of_ids[idx -2])
         if (s.dim4 == 872) and ('SocialDoors_doors' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[srDoors_phase] = [s.series_id]
 
 
         if (s.dim4 == 960) and ('UGR' in s.series_description) and ('_Pha' not in s.series_description):
             info[UGR_mag].append(s.series_id)
-        if ('UGR' in s.series_description) and ('TR1615_SBRef' in s.series_description) and ('_Pha' not in s.series_description):
-            info[UGR_sbref].append(s.series_id)
+            idx = list_of_ids.index(s.series_id)
+            info[UGR_sbref].append(list_of_ids[idx -2])
         if (s.dim4 == 960) and ('UGR' in s.series_description) and ('TR1615_Pha' in s.series_description):
             info[UGR_phase].append(s.series_id)
 
