@@ -1,5 +1,7 @@
 # Changelog
 
+(2025/04/08) - Updated consents with stamped 4/2/2025 in REDCap to include NIH language and remove logic trap questions. 
+
 (2025/03/18) - Updated REDCap fmri session notes to include visual time check for protocol card parameters.
 
 (2025/03/18) - First scan after upgrade to Siemens XA30 from VE11. Protocol cards will need manual changes for each scan for the forseeable future. Will update when this is no longer the case, and protocols can be saved properly. 
